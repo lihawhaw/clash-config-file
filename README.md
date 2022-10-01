@@ -1,5 +1,13 @@
 # clash-config-file
 
+```
+# Proxy
+https://ghproxy.com/https://raw.githubusercontent.com/lihawhaw/clash-config-file/main/proxy.yaml
+
+# 直连
+https://ghproxy.com/https://raw.githubusercontent.com/lihawhaw/clash-config-file/main/direct.yaml
+```
+
 ```yaml
 ##- PROCESS-NAME,curl,DIRECT #匹配路由自身进程(curl直连)
 ##- DOMAIN-SUFFIX,google.com,Proxy #匹配域名后缀(交由Proxy代理服务器组)
