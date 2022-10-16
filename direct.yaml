@@ -3,3 +3,5 @@ payload:
   - SRC-PORT,22,DIRECT
   - DOMAIN,links.pipecraft.net,DIRECT
   - DOMAIN-SUFFIX,jianshu.com,DIRECT
+  - DOMAIN,icanhazip.com,DIRECT
+  - DOMAIN,checkip.dyndns.com,DIRECT
