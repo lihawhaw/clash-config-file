@@ -5,3 +5,4 @@ payload:
   - DOMAIN-SUFFIX,jianshu.com,DIRECT
   - DOMAIN,icanhazip.com,DIRECT
   - DOMAIN,checkip.dyndns.com,DIRECT
+  - DOMAIN-SUFFIX,aliyun.com,DIRECT
