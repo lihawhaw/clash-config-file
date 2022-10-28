@@ -6,3 +6,4 @@ payload:
   - DOMAIN,icanhazip.com,DIRECT
   - DOMAIN,checkip.dyndns.com,DIRECT
   - DOMAIN-SUFFIX,aliyun.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com.DIRECT
