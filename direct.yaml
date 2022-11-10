@@ -9,3 +9,4 @@ payload:
   - DOMAIN-SUFFIX,taobao.com,DIRECT
   - DOMAIN,hm.baidu.com
   - DOMAIN-SUFFIX,baidu.com
+  - DOMAIN,gw.alipayobjects.com
