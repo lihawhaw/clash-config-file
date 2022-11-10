@@ -1,2 +1,7 @@
 payload:
   - DOMAIN-SUFFIX,vercel.app
+  - DOMAIN,gw.alipayobjects.com
+  - DOMAIN-SUFFIX,alipayobjects.com
+  - DOMAIN-SUFFIX,ant.design
+  - DOMAIN-SUFFIX,antv.vision
+  - DOMAIN,g2.antv.vision
