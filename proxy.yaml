@@ -7,3 +7,7 @@ payload:
   - DOMAIN,g2.antv.vision
   - DOMAIN,registry.npmjs.org
   - DOMAIN-SUFFIX,npmjs.org
+  - DOMAIN,ichnaea-web.netflix.com
+  - DOMAIN-SUFFIX,netflix.com
+  - DOMAIN,fast.com
+  - DOMAIN-SUFFIX,fast.com
