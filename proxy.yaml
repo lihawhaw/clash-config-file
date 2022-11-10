@@ -5,3 +5,5 @@ payload:
   - DOMAIN-SUFFIX,ant.design
   - DOMAIN-SUFFIX,antv.vision
   - DOMAIN,g2.antv.vision
+  - DOMAIN,registry.npmjs.org
+  - DOMAIN-SUFFIX,npmjs.org
