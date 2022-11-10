@@ -10,3 +10,4 @@ payload:
   - DOMAIN,hm.baidu.com
   - DOMAIN-SUFFIX,baidu.com
   - DOMAIN,gw.alipayobjects.com
+  - DOMAIN-SUFFIX,alipayobjects.com
