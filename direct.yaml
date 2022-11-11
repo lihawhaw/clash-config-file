@@ -11,3 +11,9 @@ payload:
   - DOMAIN-SUFFIX,baidu.com
   - DOMAIN,gw.alipayobjects.com
   - DOMAIN-SUFFIX,alipayobjects.com
+  # ----- DIDI start -----
+  - DOMAIN-SUFFIX,didichuxing.com
+  - DOMAIN-SUFFIX,didiglobal.com
+  - DOMAIN-SUFFIX,xiaojukeji.com
+  - DOMAIN-SUFFIX,didistatic.com
+  # ----- DIDI end -----
