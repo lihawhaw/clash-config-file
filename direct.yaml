@@ -18,3 +18,5 @@ payload:
   - DOMAIN-SUFFIX,didistatic.com
   # ----- DIDI end -----
   - DOMAIN-SUFFIX,dfyun.com.cn
+  - DOMAIN,api.codelife.cc
+  - DOMAIN-SUFFIX,codelife.cc
