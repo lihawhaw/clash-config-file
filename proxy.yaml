@@ -11,3 +11,7 @@ payload:
   - DOMAIN-SUFFIX,netflix.com
   - DOMAIN,fast.com
   - DOMAIN-SUFFIX,fast.com
+  - DOMAIN-SUFFIX,medium.com
+  - DOMAIN-SUFFIX,swr.vercel.app
+  - DOMAIN-SUFFIX,stackoverflow.com
+  - DOMAIN-SUFFIX,nodejs.org
