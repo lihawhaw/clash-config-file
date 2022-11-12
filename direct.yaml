@@ -24,3 +24,6 @@ payload:
   - DOMAIN-SUFFIX,cdntips.net
   - DOMAIN,qq.com
   - DOMAIN-SUFFIX,qq.com
+  - DOMAIN,static.zhihu.com
+  - DOMAIN,www.zhihu.com
+  - DOMAIN-SUFFIX,zhihu.com
