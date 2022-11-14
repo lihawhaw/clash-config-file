@@ -27,3 +27,10 @@ payload:
   - DOMAIN,static.zhihu.com
   - DOMAIN,www.zhihu.com
   - DOMAIN-SUFFIX,zhihu.com
+  - DOMAIN,music.163.com
+  - DOMAIN-SUFFIX,163.com
+  - DOMAIN,st.music.163.com
+  - DOMAIN,mimg.127.net
+  - DOMAIN-SUFFIX,127.com
+  - DOMAIN,s2.music.126.net
+  - DOMAIN-SUFFIX,126.net
