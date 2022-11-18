@@ -20,3 +20,4 @@ payload:
   - DOMAIN-SUFFIX,formilyjs.org
   - DOMAIN,v2.formilyjs.org
   - DOMAIN-SUFFIX,iconscout.com
+  - DOMAIN,cdn.iconscout.com
