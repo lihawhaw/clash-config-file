@@ -17,3 +17,5 @@ payload:
   - DOMAIN-SUFFIX,nodejs.org
   - DOMAIN,www.typescriptlang.org
   - DOMAIN-SUFFIX,typescriptlang.org
+  - DOMAIN-SUFFIX,formilyjs.org
+  - DOMAIN,v2.formilyjs.org
