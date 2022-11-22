@@ -21,3 +21,5 @@ payload:
   - DOMAIN,v2.formilyjs.org
   # - DOMAIN-SUFFIX,iconscout.com
   # - DOMAIN,cdn.iconscout.com
+  - DOMAIN,fb.me
+  - DOMAIN-SUFFIX,fb.me
