@@ -25,3 +25,5 @@ payload:
   - DOMAIN-SUFFIX,fb.me
   - DOMAIN,yarnpkg.com
   - DOMAIN-SUFFIX,yarnpkg.com
+  - DOMAIN,babel.dev
+  - DOMAIN-SUFFIX,babel.dev
