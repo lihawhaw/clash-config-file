@@ -27,3 +27,5 @@ payload:
   - DOMAIN-SUFFIX,yarnpkg.com
   - DOMAIN,babel.dev
   - DOMAIN-SUFFIX,babel.dev
+  - DOMAIN,babeljs.io
+  - DOMAIN-SUFFIX,babeljs.io
