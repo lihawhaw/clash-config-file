@@ -23,3 +23,5 @@ payload:
   # - DOMAIN,cdn.iconscout.com
   - DOMAIN,fb.me
   - DOMAIN-SUFFIX,fb.me
+  - DOMAIN,yarnpkg.com
+  - DOMAIN-SUFFIX,yarnpkg.com
