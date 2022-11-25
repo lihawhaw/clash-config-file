@@ -33,3 +33,5 @@ payload:
   - DOMAIN-SUFFIX,typescriptlang.org
   - DOMAIN,polyfill.io
   - DOMAIN-SUFFIX,polyfill.io
+  - DOMAIN,msecnd.net
+  - DOMAIN-SUFFIX,msecnd.net
