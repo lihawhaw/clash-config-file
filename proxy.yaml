@@ -35,3 +35,5 @@ payload:
   - DOMAIN-SUFFIX,polyfill.io
   - DOMAIN,msecnd.net
   - DOMAIN-SUFFIX,msecnd.net
+  - DOMAIN,cdn.jsdelivr.net
+  - DOMAIN-SUFFIX,jsdelivr.net
