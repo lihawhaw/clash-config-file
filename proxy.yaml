@@ -29,3 +29,5 @@ payload:
   - DOMAIN-SUFFIX,babel.dev
   - DOMAIN,babeljs.io
   - DOMAIN-SUFFIX,babeljs.io
+  - DOMAIN,typescriptlang.org
+  - DOMAIN-SUFFIX,typescriptlang.org
