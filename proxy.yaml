@@ -41,3 +41,4 @@ payload:
   - DOMAIN-SUFFIX,github.com
   - DOMAIN,buddy.works
   - DOMAIN-SUFFIX,buddy.works
+  - DOMAIN,widget.intercom.io
