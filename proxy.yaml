@@ -42,3 +42,5 @@ payload:
   - DOMAIN,buddy.works
   - DOMAIN-SUFFIX,buddy.works
   - DOMAIN,widget.intercom.io
+  - DOMAIN,www.landingfolio.com
+  - DOMAIN-SUFFIX,landingfolio.com
