@@ -44,3 +44,5 @@ payload:
   - DOMAIN,widget.intercom.io
   - DOMAIN,www.landingfolio.com
   - DOMAIN-SUFFIX,landingfolio.com
+  - DOMAIN,www.tailbits.com
+  - DOMAIN-SUFFIX,tailbits.com
