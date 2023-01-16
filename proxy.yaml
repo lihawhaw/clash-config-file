@@ -46,3 +46,8 @@ payload:
   - DOMAIN-SUFFIX,landingfolio.com
   - DOMAIN,www.tailbits.com
   - DOMAIN-SUFFIX,tailbits.com
+  - DOMAIN,searchcode.com
+  - DOMAIN-SUFFIX,searchcode.com
+  - DOMAIN,ddms.mihtool.com
+  - DOMAIN,www.mihtool.com
+  - DOMAIN-SUFFIX,mihtool.com
