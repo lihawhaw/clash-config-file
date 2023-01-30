@@ -51,3 +51,4 @@ payload:
   - DOMAIN,ddms.mihtool.com
   - DOMAIN,www.mihtool.com
   - DOMAIN-SUFFIX,mihtool.com
+  - DOMAIN-SUFFIX,showdownjs.com
