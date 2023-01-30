@@ -52,3 +52,5 @@ payload:
   - DOMAIN,www.mihtool.com
   - DOMAIN-SUFFIX,mihtool.com
   - DOMAIN-SUFFIX,showdownjs.com
+  - DOMAIN,raw.githubusercontent.com
+  - DOMAIN-SUFFIX,githubusercontent.com
