@@ -54,3 +54,5 @@ payload:
   - DOMAIN-SUFFIX,showdownjs.com
   - DOMAIN,raw.githubusercontent.com
   - DOMAIN-SUFFIX,githubusercontent.com
+  - DOMAIN,docs.brew.sh
+  - DOMAIN-SUFFIX,brew.sh
