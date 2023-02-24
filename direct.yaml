@@ -41,3 +41,4 @@ payload:
   - DOMAIN-SUFFIX,mi.com
   - DOMAIN,hellogithub.com
   - DOMAIN-SUFFIX,hellogithub.com
+  - DOMAIN,www.aliyun.com
