@@ -56,3 +56,8 @@ payload:
   - DOMAIN-SUFFIX,githubusercontent.com
   - DOMAIN,docs.brew.sh
   - DOMAIN-SUFFIX,brew.sh
+  - DOMAIN,yarnpkg.com
+  - DOMAIN-SUFFIX,yarnpkg.com
+  - DOMAIN,ofcncog2cu-dsn.algolia.net
+  - DOMAIN-SUFFIX,algolia.net
+  
