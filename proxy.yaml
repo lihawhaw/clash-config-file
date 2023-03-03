@@ -60,4 +60,5 @@ payload:
   - DOMAIN-SUFFIX,yarnpkg.com
   - DOMAIN,ofcncog2cu-dsn.algolia.net
   - DOMAIN-SUFFIX,algolia.net
+  - DOMAIN,formatjs.io
   
