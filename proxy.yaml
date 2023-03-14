@@ -61,4 +61,7 @@ payload:
   - DOMAIN,ofcncog2cu-dsn.algolia.net
   - DOMAIN-SUFFIX,algolia.net
   - DOMAIN,formatjs.io
+  - DOMAIN,openai.com
+  - DOMAIN-SUFFIX,openai.com
+  - DOMAIN-SUFFIX,ai.com
   
