@@ -65,4 +65,6 @@ payload:
   - DOMAIN-SUFFIX,openai.com
   - DOMAIN-SUFFIX,ai.com
   - DOMAIN,www.githubstatus.com
+  - DOMAIN,dl.google.com
+  - DOMAIN-SUFFIX,google.com
   
