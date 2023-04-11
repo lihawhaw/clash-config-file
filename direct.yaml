@@ -42,3 +42,6 @@ payload:
   - DOMAIN,hellogithub.com
   - DOMAIN-SUFFIX,hellogithub.com
   - DOMAIN,www.aliyun.com
+  - DOMAIN,api5-normal-c-hl.amemv.com
+  - DOMAIN,amemv.com
+  - DOMAIN-SUFFIX,amemv.com
