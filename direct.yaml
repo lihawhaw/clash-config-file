@@ -45,3 +45,5 @@ payload:
   - DOMAIN,api5-normal-c-hl.amemv.com
   - DOMAIN,amemv.com
   - DOMAIN-SUFFIX,amemv.com
+  - DOMAIN,www.ip138.com
+  - DOMAIN-SUFFIX,ip138.com
