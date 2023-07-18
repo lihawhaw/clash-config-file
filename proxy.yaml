@@ -74,4 +74,5 @@ payload:
   - DOMAIN,cdn.carbonads.com
   - DOMAIN-SUFFIX,carbonads.com
   - DOMAIN,claude.ai
+  - DOMAIN,anthropic.com
   
