@@ -73,4 +73,5 @@ payload:
   - DOMAIN-SUFFIX,gitkraken.com
   - DOMAIN,cdn.carbonads.com
   - DOMAIN-SUFFIX,carbonads.com
+  - DOMAIN,claude.ai
   
