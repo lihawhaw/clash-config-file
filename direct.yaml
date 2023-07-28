@@ -50,3 +50,4 @@ payload:
   - DOMAIN,mp.echats.cn
   - DOMAIN-SUFFIX,echats.cn
   - DOMAIN,beian.miit.gov.cn
+  - DOMAIN,cloudcache.tencentcs.com
