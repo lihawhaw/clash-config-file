@@ -52,3 +52,6 @@ payload:
   - DOMAIN,beian.miit.gov.cn
   - DOMAIN,cloudcache.tencentcs.com
   - DOMAIN,aegis.qq.com
+  - DOMAIN,www.zhihu.com
+  - DOMAIN-SUFFIX,zhihu.com
+  - DOMAIN-SUFFIX,juejin.com
