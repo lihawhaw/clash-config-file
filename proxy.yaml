@@ -76,4 +76,6 @@ payload:
   - DOMAIN,claude.ai
   - DOMAIN,anthropic.com
   - DOMAIN,ts-ast-viewer.com
+  - DOMAIN,divital.com
+  - DOMAIN-SUFFIX,divital.com
   
