@@ -78,4 +78,6 @@ payload:
   - DOMAIN,ts-ast-viewer.com
   - DOMAIN,divital.com
   - DOMAIN-SUFFIX,divital.com
+  - DOMAIN,zh-tw.gravatar.com
+  - DOMAIN-SUFFIX,gravatar.com
   
