@@ -81,4 +81,5 @@ payload:
   - DOMAIN,zh-tw.gravatar.com
   - DOMAIN-SUFFIX,gravatar.com
   - DOMAIN,code.visualstudio.com
+  - DOMAIN,js.monitor.azure.com
   
