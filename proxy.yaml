@@ -1,5 +1,7 @@
 payload:
   # Google Start
+  - DOMAIN,www.google.com
+  - DOMAIN,www.google.com.hk
   - DOMAIN,dl.google.com
   - DOMAIN,translate.googleapis.com
   - DOMAIN,ajax.googleapis.com
