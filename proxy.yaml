@@ -20,6 +20,11 @@ payload:
   - DOMAIN-SUFFIX,github.com
   - DOMAIN-SUFFIX,github.io
   - DOMAIN,www.githubstatus.com
+  - DOMAIN,github.githubassets.com
+  - DOMAIN-SUFFIX,githubassets.com
+  - DOMAIN-SUFFIX,githubstatus.com
+  - DOMAIN,collector.github.com
+  - DOMAIN,api.github.com
   # Github End
   - DOMAIN,lyz.js.org
   - DOMAIN,vercel.app
