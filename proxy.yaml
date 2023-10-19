@@ -12,6 +12,7 @@ payload:
   - DOMAIN-SUFFIX,google.com.jp
   - DOMAIN-KEYWORD,googleusercontent
   - DOMAIN-SUFFIX,chrome.com
+  - DOMAIN-SUFFIX,gstatic.com
   # Google End
   # Github Start
   - DOMAIN,github.com
