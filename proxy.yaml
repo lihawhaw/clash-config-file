@@ -113,4 +113,5 @@ payload:
   - DOMAIN-KEYWORD,codesandbox
   - DOMAIN-SUFFIX,nextjs.org
   - DOMAIN-SUFFIX,npmjs.com
+  - DOMAIN-SUFFIX,novu.co
   
