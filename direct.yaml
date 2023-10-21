@@ -55,3 +55,4 @@ payload:
   - DOMAIN,www.zhihu.com
   - DOMAIN-SUFFIX,zhihu.com
   - DOMAIN-SUFFIX,juejin.com
+  - DOMAIN-SUFFIX,antgroup.com
