@@ -30,12 +30,25 @@ payload:
   - DOMAIN-SUFFIX,githubstatus.com
   - DOMAIN,collector.github.com
   - DOMAIN,api.github.com
+  - DOMAIN,github.dev
+  - DOMAIN-SUFFIX,github.dev
+  - DOMAIN,github.io
+  - DOMAIN-SUFFIX,github.io
+  - DOMAIN,githubusercontent.com
+  - DOMAIN-SUFFIX,githubusercontent.com
+  - DOMAIN,githubstatus.com
+  - DOMAIN,githubassets.com
+  - DOMAIN-SUFFIX,githubassets.com
+  - DOMAIN,assets.github.dev
+  - DOMAIN-SUFFIX,assets.github.dev
   # Github End
   - DOMAIN,lyz.js.org
   - DOMAIN,vercel.app
   - DOMAIN-SUFFIX,vercel.app
   #  - DOMAIN,gw.alipayobjects.com
   #  - DOMAIN-SUFFIX,alipayobjects.com
+  - DOMAIN,ant.design
+  - DOMAIN,3x.ant.design
   - DOMAIN-SUFFIX,ant.design
   - DOMAIN-SUFFIX,antv.vision
   - DOMAIN,g2.antv.vision
@@ -109,9 +122,38 @@ payload:
   - DOMAIN,code.visualstudio.com
   - DOMAIN,js.monitor.azure.com
   - DOMAIN,wcpstatic.microsoft.com
-  - DOMAIN-SUFFIX,codesandbox.io
   - DOMAIN-KEYWORD,codesandbox
   - DOMAIN-SUFFIX,nextjs.org
   - DOMAIN-SUFFIX,npmjs.com
+  - DOMAIN,npmjs.com
   - DOMAIN-SUFFIX,novu.co
-  
+  - DOMAIN-SUFFIX,mozilla.org
+  - DOMAIN,developer.mozilla.org
+  - DOMAIN,www.google-analytics.com
+  - DOMAIN-SUFFIX,google-analytics.com
+  - DOMAIN,wikipedia.org
+  - DOMAIN-SUFFIX,wikipedia.org
+  - DOMAIN,codesandbox.io
+  - DOMAIN-SUFFIX,codesandbox.io
+  - DOMAIN,staticblitz.com
+  - DOMAIN-SUFFIX,staticblitz.com
+  - DOMAIN,firebaseio.com
+  - DOMAIN-SUFFIX,firebaseio.com
+  - DOMAIN,medium.com
+  - DOMAIN-SUFFIX,medium.com
+  - DOMAIN,dev.to
+  - DOMAIN-SUFFIX,dev.to
+  - DOMAIN,blog.openreplay.com
+  - DOMAIN-SUFFIX,openreplay.com
+  - DOMAIN,tailwindcss.com
+  - DOMAIN-SUFFIX,tailwindcss.com
+  - DOMAIN,unpkg.com
+  - DOMAIN-SUFFIX,unpkg.com
+  - DOMAIN,www.vscode-unpkg.net
+  - DOMAIN-SUFFIX,msecnd.net
+  - DOMAIN-SUFFIX,vscode-unpkg.net
+  - DOMAIN-SUFFIX,vscode-cdn.net
+  - DOMAIN,default.exp-tas.com
+  - DOMAIN,ms-vscode.vscode-unpkg.net
+  - DOMAIN,github.vscode-unpkg.net
+  - DOMAIN,eamodio.vscode-unpkg.net
