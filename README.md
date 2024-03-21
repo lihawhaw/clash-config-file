@@ -2,10 +2,10 @@
 
 ```
 # Proxy
-https://ghproxy.com/https://raw.githubusercontent.com/lihawhaw/clash-config-file/main/proxy.yaml
+https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/proxy.yaml
 
-# 直连
-https://ghproxy.com/https://raw.githubusercontent.com/lihawhaw/clash-config-file/main/direct.yaml
+# Direct
+https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/direct.yaml    
 ```
 
 ```yaml
