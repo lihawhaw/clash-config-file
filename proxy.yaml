@@ -157,3 +157,9 @@ payload:
   - DOMAIN,ms-vscode.vscode-unpkg.net
   - DOMAIN,github.vscode-unpkg.net
   - DOMAIN,eamodio.vscode-unpkg.net
+  - DOMAIN,www.notion.com
+  - DOMAIN,www.notion.so
+  - DOMAIN,exp.notion.so
+  - DOMAIN,aif.notion.so
+  - DOMAIN-SUFFIX,notion.so
+  - DOMAIN-SUFFIX,notion.com
