@@ -5,6 +5,8 @@ payload:
   - DOMAIN,dl.google.com
   - DOMAIN,translate.googleapis.com
   - DOMAIN,ajax.googleapis.com
+  - DOMAIN,fonts.googleapis.com
+  - DOMAIN-SUFFIX,googleapis.com
   - DOMAIN,firebase.google.com
   - DOMAIN,tools.google.com
   - DOMAIN,ssl.gstatic.com
