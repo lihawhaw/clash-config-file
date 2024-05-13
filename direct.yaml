@@ -58,3 +58,8 @@ payload:
   - DOMAIN-SUFFIX,antgroup.com
   - DOMAIN,mimg.127.net
   - DOMAIN-SUFFIX,127.net
+  - DOMAIN,account.xiaomi.com
+  - DOMAIN,xiaomi.com
+  - DOMAIN-SUFFIX,xiaomi.com
+  - DOMAIN-SUFFIX,mi.com
+  
