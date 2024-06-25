@@ -17,6 +17,7 @@ payload:
   - DOMAIN-SUFFIX,xiaojukeji.com
   - DOMAIN-SUFFIX,didistatic.com
   - DOMAIN-SUFFIX,yufeg.com
+  - DOMAIN-SUFFIX,didipay.com
   - DOMAIN,api.data-studio.yufeg.com
   # ----- DIDI end -----
   - DOMAIN-SUFFIX,dfyun.com.cn
