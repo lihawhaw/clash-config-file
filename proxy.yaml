@@ -165,3 +165,5 @@ payload:
   - DOMAIN,aif.notion.so
   - DOMAIN-SUFFIX,notion.so
   - DOMAIN-SUFFIX,notion.com
+  - DOMAIN,chatgpt.com
+  - DOMAIN-SUFFIX,chatgpt.com
