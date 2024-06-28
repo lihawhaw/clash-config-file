@@ -1,16 +1,16 @@
 payload:
+  # ----- port start -----
   - DST-PORT,22,DIRECT
   - SRC-PORT,22,DIRECT
-  - DOMAIN,links.pipecraft.net,DIRECT
-  - DOMAIN-SUFFIX,jianshu.com,DIRECT
-  - DOMAIN,icanhazip.com,DIRECT
-  - DOMAIN,checkip.dyndns.com,DIRECT
-  - DOMAIN-SUFFIX,aliyun.com,DIRECT
-  - DOMAIN-SUFFIX,taobao.com,DIRECT
-  - DOMAIN,hm.baidu.com
-  - DOMAIN-SUFFIX,baidu.com
-  - DOMAIN,gw.alipayobjects.com
-  - DOMAIN-SUFFIX,alipayobjects.com
+  # ----- port end -----
+  # ----- xiaomi start -----
+  - DOMAIN,account.xiaomi.com
+  - DOMAIN,xiaomi.com
+  - DOMAIN-SUFFIX,xiaomi.com
+  - DOMAIN-SUFFIX,mi.com
+  - DOMAIN,www.mi.com
+  - DOMAIN-SUFFIX,mi.com
+  # ----- xiaomi end -----
   # ----- DIDI start -----
   - DOMAIN-SUFFIX,didichuxing.com
   - DOMAIN-SUFFIX,didiglobal.com
@@ -38,8 +38,6 @@ payload:
   - DOMAIN,s2.music.126.net
   - DOMAIN-SUFFIX,126.net
   - DOMAIN-SUFFIX,arco.design
-  - DOMAIN,www.mi.com
-  - DOMAIN-SUFFIX,mi.com
   - DOMAIN,hellogithub.com
   - DOMAIN-SUFFIX,hellogithub.com
   - DOMAIN,www.aliyun.com
@@ -57,10 +55,15 @@ payload:
   - DOMAIN-SUFFIX,zhihu.com
   - DOMAIN-SUFFIX,juejin.com
   - DOMAIN-SUFFIX,antgroup.com
-  - DOMAIN,mimg.127.net
   - DOMAIN-SUFFIX,127.net
-  - DOMAIN,account.xiaomi.com
-  - DOMAIN,xiaomi.com
-  - DOMAIN-SUFFIX,xiaomi.com
-  - DOMAIN-SUFFIX,mi.com
+  - DOMAIN,links.pipecraft.net,DIRECT
+  - DOMAIN-SUFFIX,jianshu.com,DIRECT
+  - DOMAIN,icanhazip.com,DIRECT
+  - DOMAIN,checkip.dyndns.com,DIRECT
+  - DOMAIN-SUFFIX,aliyun.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com,DIRECT
+  - DOMAIN,hm.baidu.com
+  - DOMAIN-SUFFIX,baidu.com
+  - DOMAIN,gw.alipayobjects.com
+  - DOMAIN-SUFFIX,alipayobjects.com
   
