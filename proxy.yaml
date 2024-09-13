@@ -167,3 +167,8 @@ payload:
   - DOMAIN-SUFFIX,notion.com
   - DOMAIN,chatgpt.com
   - DOMAIN-SUFFIX,chatgpt.com
+  - DOMAIN,notifications.bitwarden.com
+  - DOMAIN,api.bitwarden.com
+  - DOMAIN-SUFFIX,bitwarden.com
+  - DOMAIN,icons.bitwarden.net
+  - DOMAIN-SUFFIX,bitwarden.net
