@@ -172,3 +172,7 @@ payload:
   - DOMAIN-SUFFIX,bitwarden.com
   - DOMAIN,icons.bitwarden.net
   - DOMAIN-SUFFIX,bitwarden.net
+  - DOMAIN,download.lineageos.org
+  - DOMAIN-SUFFIX,lineageos.org
+  - DOMAIN,static.cloudflareinsights.com
+  - DOMAIN-SUFFIX,cloudflareinsights.com
