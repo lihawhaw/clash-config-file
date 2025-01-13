@@ -176,3 +176,7 @@ payload:
   - DOMAIN-SUFFIX,lineageos.org
   - DOMAIN,static.cloudflareinsights.com
   - DOMAIN-SUFFIX,cloudflareinsights.com
+  - DOMAIN,avatars.githubusercontent.com
+  - DOMAIN,formilyjs.org
+  - DOMAIN-SUFFIX,formilyjs.org
+  - DOMAIN-SUFFIX,githubusercontent.com
