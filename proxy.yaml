@@ -180,3 +180,5 @@ payload:
   - DOMAIN,formilyjs.org
   - DOMAIN-SUFFIX,formilyjs.org
   - DOMAIN-SUFFIX,githubusercontent.com
+  - DOMAIN,forum.openwrt.org
+  - DOMAIN-SUFFIX,openwrt.org
