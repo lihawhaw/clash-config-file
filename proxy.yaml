@@ -182,3 +182,5 @@ payload:
   - DOMAIN-SUFFIX,githubusercontent.com
   - DOMAIN,forum.openwrt.org
   - DOMAIN-SUFFIX,openwrt.org
+  - DOMAIN-SUFFIX,manus.im
+  - DOMAIN,manus.im
