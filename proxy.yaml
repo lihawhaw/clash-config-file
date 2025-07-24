@@ -184,3 +184,5 @@ payload:
   - DOMAIN-SUFFIX,openwrt.org
   - DOMAIN-SUFFIX,manus.im
   - DOMAIN,manus.im
+  - DOMAIN,cdn.oaistatic.com
+  - DOMAIN-SUFFIX,oaistatic.com
