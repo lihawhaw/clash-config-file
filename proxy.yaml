@@ -186,3 +186,5 @@ payload:
   - DOMAIN,manus.im
   - DOMAIN,cdn.oaistatic.com
   - DOMAIN-SUFFIX,oaistatic.com
+  - DOMAIN-SUFFIX,rustdesk.com
+  - DOMAIN,api.rustdesk.com
