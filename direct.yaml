@@ -67,4 +67,6 @@ payload:
   - DOMAIN,gw.alipayobjects.com
   - DOMAIN-SUFFIX,alipayobjects.com
   - DOMAIN,mon-va.byteoversea.com
+  - DOMAIN,cloudapi.bytedance.net
+  - DOMAIN-SUFFIX,bytedance.net
   
