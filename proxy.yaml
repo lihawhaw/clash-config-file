@@ -188,3 +188,5 @@ payload:
   - DOMAIN-SUFFIX,oaistatic.com
   - DOMAIN-SUFFIX,rustdesk.com
   - DOMAIN,api.rustdesk.com
+  - DOMAIN,api.anthropic.com
+  - DOMAIN-SUFFIX,anthropic.com
