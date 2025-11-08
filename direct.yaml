@@ -69,4 +69,5 @@ payload:
   - DOMAIN,mon-va.byteoversea.com
   - DOMAIN,cloudapi.bytedance.net
   - DOMAIN-SUFFIX,bytedance.net
-  
+  - DOMAIN,dldir1v6.qq.com
+  - DOMAIN-SUFFIX,qq.com
