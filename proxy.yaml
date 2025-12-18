@@ -190,3 +190,64 @@ payload:
   - DOMAIN,api.rustdesk.com
   - DOMAIN,api.anthropic.com
   - DOMAIN-SUFFIX,anthropic.com
+  - DOMAIN,rustdesk.com
+  - DOMAIN,api.rustdesk.com
+  - DOMAIN,www.palantir.com
+  - DOMAIN-SUFFIX,palantir.com
+  - DOMAIN,cursor.sh
+  - DOMAIN-SUFFIX,cursor.sh
+  - DOMAIN-SUFFIX,npmtrends.com
+  - DOMAIN,npm-trends-proxy.uidotdev.workers.dev
+  - DOMAIN-SUFFIX,mdnplay.dev
+  - DOMAIN,api.individual.githubcopilot.com
+  - DOMAIN-SUFFIX,githubcopilot.com
+  - DOMAIN,ts-morph.com
+  - DOMAIN-SUFFIX,ts-morph.com
+  - DOMAIN,maxcdn.bootstrapcdn.com
+  - DOMAIN-SUFFIX,bootstrapcdn.com
+  - DOMAIN-SUFFIX,code.jquery.com
+  - DOMAIN,jquery.com
+  - DOMAIN,signin.aws.amazon.com
+  - DOMAIN,console.aws.amazon.com
+  - DOMAIN-SUFFIX,console.aws.amazon.com
+  - DOMAIN-SUFFIX,aws.amazon.com
+  - DOMAIN-SUFFIX,console.awsstatic.com
+  - DOMAIN,support.typora.io
+  - DOMAIN-SUFFIX,typora.io
+    # Twitter/X 主要域名列表
+  - DOMAIN,x.com
+  - DOMAIN-SUFFIX,x.com
+  - DOMAIN,twitter.com
+  - DOMAIN-SUFFIX,twitter.com
+  - DOMAIN,t.co
+  - DOMAIN-SUFFIX,t.co
+  - DOMAIN,twimg.com
+  - DOMAIN-SUFFIX,twimg.com
+  - DOMAIN,pscp.tv
+  - DOMAIN-SUFFIX,pscp.tv
+  - DOMAIN,periscope.tv
+  - DOMAIN-SUFFIX,periscope.tv
+  - DOMAIN,tweetdeck.com
+  - DOMAIN-SUFFIX,tweetdeck.com
+  - DOMAIN,ads-twitter.com
+  - DOMAIN-SUFFIX,ads-twitter.com
+  - DOMAIN,twitterinc.com
+  - DOMAIN-SUFFIX,twitterinc.com
+  - DOMAIN,twtrdns.net
+  - DOMAIN-SUFFIX,twtrdns.net
+  - DOMAIN,twitterstat.us
+  - DOMAIN-SUFFIX,twitterstat.us
+  - DOMAIN,starchart.cc
+  - DOMAIN,www.clashverge.dev
+  - DOMAIN,code.claude.com
+  - DOMAIN,claude.com
+  - DOMAIN-SUFFIX,claude.com
+  - DOMAIN,mintcdn.com
+  - DOMAIN-SUFFIX,mintcdn.com
+  - DOMAIN,unofficial-builds.nodejs.org
+  - DOMAIN-SUFFIX,nodejs.org
+  - DOMAIN,ping0.cc
+  - DOMAIN-SUFFIX,ping0.cc
+  - DOMAIN,developer.mozilla.org
+  - DOMAIN-SUFFIX,mozilla.org
+
