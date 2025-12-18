@@ -1,0 +1,16 @@
+payload:
+  - DOMAIN,xiaojukeji.com
+  - DOMAIN-SUFFIX,xiaojukeji.com
+  - DOMAIN,didichuxing.com
+  - DOMAIN-SUFFIX,didichuxing.com
+  - DOMAIN,didi.cn
+  - DOMAIN-SUFFIX,didi.cn
+  - DOMAIN-SUFFIX,didipay.com
+  - DOMAIN,diditaxi.com.cn
+  - DOMAIN-SUFFIX,diditaxi.com.cn
+  - DOMAIN,didiglobal.com
+  - DOMAIN-SUFFIX,didiglobal.com
+  - DOMAIN,didistatic.com
+  - DOMAIN-SUFFIX,didistatic.com
+  - DOMAIN-SUFFIX,yufeg.com
+  - DOMAIN,api.data-studio.yufeg.com
