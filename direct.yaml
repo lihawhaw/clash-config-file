@@ -62,3 +62,18 @@ payload:
   - DOMAIN-SUFFIX,bytedance.net
   - DOMAIN,dldir1v6.qq.com
   - DOMAIN-SUFFIX,qq.com
+  - DOMAIN,mon-va.byteoversea.com
+  - DOMAIN,proxy.vercel.lihaha.cn
+  - DOMAIN-SUFFIX,lihaha.cn
+  - DOMAIN,cdn.apifox.com
+  - DOMAIN-SUFFIX,apifox.com
+  - DOMAIN,www.yuque.com
+  - DOMAIN-SUFFIX,yuque.com
+  - DOMAIN,gw.alipayobjects.com
+  - DOMAIN-SUFFIX,alipayobjects.com
+  - DOMAIN,office-cn-hangzhou.imm.aliyuncs.com
+  - DOMAIN-SUFFIX,aliyuncs.com
+  - DOMAIN,static.deepseek.com
+  - DOMAIN,chat.deepseek.com
+  - DOMAIN-SUFFIX,deepseek.com
+
