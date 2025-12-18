@@ -11,15 +11,6 @@ payload:
   - DOMAIN,www.mi.com
   - DOMAIN-SUFFIX,mi.com
   # ----- xiaomi end -----
-  # ----- DIDI start -----
-  - DOMAIN-SUFFIX,didichuxing.com
-  - DOMAIN-SUFFIX,didiglobal.com
-  - DOMAIN-SUFFIX,xiaojukeji.com
-  - DOMAIN-SUFFIX,didistatic.com
-  - DOMAIN-SUFFIX,yufeg.com
-  - DOMAIN-SUFFIX,didipay.com
-  - DOMAIN,api.data-studio.yufeg.com
-  # ----- DIDI end -----
   - DOMAIN-SUFFIX,dfyun.com.cn
   - DOMAIN,api.codelife.cc
   - DOMAIN-SUFFIX,codelife.cc
