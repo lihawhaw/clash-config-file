@@ -1,0 +1,23 @@
+payload:
+  - DOMAIN,x.com
+  - DOMAIN-SUFFIX,x.com
+  - DOMAIN,twitter.com
+  - DOMAIN-SUFFIX,twitter.com
+  - DOMAIN,t.co
+  - DOMAIN-SUFFIX,t.co
+  - DOMAIN,twimg.com
+  - DOMAIN-SUFFIX,twimg.com
+  - DOMAIN,pscp.tv
+  - DOMAIN-SUFFIX,pscp.tv
+  - DOMAIN,periscope.tv
+  - DOMAIN-SUFFIX,periscope.tv
+  - DOMAIN,tweetdeck.com
+  - DOMAIN-SUFFIX,tweetdeck.com
+  - DOMAIN,ads-twitter.com
+  - DOMAIN-SUFFIX,ads-twitter.com
+  - DOMAIN,twitterinc.com
+  - DOMAIN-SUFFIX,twitterinc.com
+  - DOMAIN,twtrdns.net
+  - DOMAIN-SUFFIX,twtrdns.net
+  - DOMAIN,twitterstat.us
+  - DOMAIN-SUFFIX,twitterstat.us
