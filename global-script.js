@@ -1,7 +1,9 @@
 /** 规则名称映射 */
-const ruleNames = {
+const customProxyGroupsNames = {
   ai: "✨国外模型",
   didi: "🚕滴滴直连",
+  tiktok: "🎬TikTok",
+  twitter: "📣Twitter",
 };
 
 /** 根据配置文件名称动态生成 rule 名称 */
@@ -9,8 +11,10 @@ function getRuleName(profileName) {
   const defaultRuleName = {
     direct: "DIRECT",
     proxy: "DIRECT",
-    ai: "DIRECT",
-    didi: ruleNames.didi,
+    ai: customProxyGroupsNames.ai,
+    didi: customProxyGroupsNames.didi,
+    tiktok: customProxyGroupsNames.tiktok,
+    twitter: customProxyGroupsNames.twitter,
   };
 
   const map = {
@@ -18,12 +22,10 @@ function getRuleName(profileName) {
       ...defaultRuleName,
       direct: "🚀直接连接",
       proxy: "🔰国外流量",
-      ai: "✨国外模型",
     },
     AntLink: {
       ...defaultRuleName,
       proxy: "AntLink",
-      ai: "AntLink",
     },
   };
   return map[profileName] || defaultRuleName;
@@ -46,55 +48,19 @@ const foreignNameservers = [
   "https://194.242.2.3/dns-query", // Mullvad(备)
 ];
 
-/** DNS配置 */
-const dnsConfig = {
-  enable: true,
-  listen: "0.0.0.0:1053",
-  ipv6: true,
-  "use-system-hosts": false,
-  "cache-algorithm": "arc",
-  "enhanced-mode": "fake-ip",
-  "fake-ip-range": "198.18.0.1/16",
-  "fake-ip-filter": [
-    "+.lan",
-    "+.local",
-    "time.*.com",
-    "ntp.*.com",
-    "time.*.com",
-    "+.msftconnecttest.com",
-    "+.msftncsi.com",
-    "localhost.ptlogin2.qq.com",
-    "localhost.sec.qq.com",
-    "localhost.work.weixin.qq.com",
-    "+.market.xiaomi.com",
-    "*.msftncsi.com",
-    "www.msftconnecttest.com",
-    "*.lihaha.cn",
-    "*.xiaojukeji.com",
-    "+.didichuxing.com",
-    "+.didiglobal.com",
-    "+.didipay.com",
-    "+.diditaxi.com.cn",
-  ],
-  "default-nameserver": ["223.5.5.5", "119.29.29.29", "1.1.1.1", "8.8.8.8"],
-  nameserver: [...domesticNameservers, ...foreignNameservers],
-  "proxy-server-nameserver": [...domesticNameservers, ...foreignNameservers],
-  "nameserver-policy": {
-    "geosite:private,cn,geolocation-cn": domesticNameservers,
-    "geosite:google,youtube,telegram,gfw,geolocation-!cn": foreignNameservers,
-  },
-};
-
 /**
  * 配置中的规则"config.rules"是一个数组，通过新旧数组合并来添加
  * @param directRuleName 直接连接的规则名称
  * @param proxyRuleName 代理的规则名称
  * @returns 规则数组
  */
-function getPrependRule({ directRuleName, proxyRuleName, aiRuleName, didiRuleName }) {
+function getPrependRule({ directRuleName, proxyRuleName, aiRuleName, didiRuleName, tiktokRuleName, twitterRuleName }) {
   return [
     `RULE-SET,lihawhaw-didi,${didiRuleName}`,
     `RULE-SET,lihawhaw-direct,${directRuleName}`,
+    `RULE-SET,lihawhaw-ai-service,${aiRuleName}`,
+    `RULE-SET,lihawhaw-tiktok,${tiktokRuleName}`,
+    `RULE-SET,lihawhaw-twitter,${twitterRuleName}`,
     `RULE-SET,lihawhaw-proxy,${proxyRuleName}`,
     `RULE-SET,loyalsoldier-direct,${directRuleName}`,
     `RULE-SET,loyalsoldier-private,${directRuleName}`,
@@ -127,7 +93,7 @@ function getProxyGroups({ directRuleName, proxyRuleName }) {
   return [
     {
       ...groupBaseOption,
-      name: ruleNames.ai,
+      name: customProxyGroupsNames.ai,
       type: "select",
       proxies: [proxyRuleName, directRuleName],
       //   'include-all': true,
@@ -136,22 +102,35 @@ function getProxyGroups({ directRuleName, proxyRuleName }) {
     },
     {
       ...groupBaseOption,
-      name: ruleNames.didi,
+      name: customProxyGroupsNames.tiktok,
+      type: "select",
+      proxies: [proxyRuleName],
+      "include-all-proxies": true,
+    },
+    {
+      ...groupBaseOption,
+      name: customProxyGroupsNames.twitter,
+      type: "select",
+      proxies: [proxyRuleName],
+      "include-all-proxies": true,
+    },
+    {
+      ...groupBaseOption,
+      name: customProxyGroupsNames.didi,
       type: "select",
       proxies: [directRuleName],
+      "include-all-proxies": true,
     },
   ];
 }
 
 function main(config, profileName) {
   const ruleNames = getRuleName(profileName);
-  const { direct: directRuleName, proxy: proxyRuleName, ai: aiRuleName, didi: didiRuleName } = ruleNames;
+  const { direct: directRuleName, proxy: proxyRuleName, ai: aiRuleName, didi: didiRuleName, tiktok: tiktokRuleName, twitter: twitterRuleName } = ruleNames;
 
   let oldRules = config["rules"];
-  config["rules"] = getPrependRule({ directRuleName, proxyRuleName, aiRuleName, didiRuleName }).concat(oldRules);
+  config["rules"] = getPrependRule({ directRuleName, proxyRuleName, aiRuleName, didiRuleName, tiktokRuleName, twitterRuleName }).concat(oldRules);
 
-  config["proxy-groups"] = config["proxy-groups"].slice(0, -1).concat(getProxyGroups({ directRuleName, proxyRuleName, aiRuleName })).concat(config["proxy-groups"].slice(-1));
-
-  // config["dns"] = { ...config["dns"], ...dnsConfig };
+  config["proxy-groups"] = config["proxy-groups"].slice(0, -1).concat(getProxyGroups({ directRuleName, proxyRuleName })).concat(config["proxy-groups"].slice(-1));
   return config;
 }

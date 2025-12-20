@@ -19,11 +19,18 @@ dns:
     - "*.arpa"
     - "time.*.com"
     - "ntp.*.com"
+    - "+.ntp.org"
     - "time.*.com"
     - "+.market.xiaomi.com"
+    - "connect.rom.miui.com"
+    - "+.miwifi.com"
     - "localhost.ptlogin2.qq.com"
-    - "*.msftncsi.com"
-    - "www.msftconnecttest.com"
+    - "localhost.sec.qq.com"
+    - "localhost.work.weixin.qq.com"
+    - "+.weixin.qq.com"
+    - "+.wechat.com"
+    - "+.msftncsi.com"
+    - "+.msftconnecttest.com"
     - "+.lihaha.cn"
     - "+.xiaojukeji.com"
     - "+.didichuxing.com"
@@ -118,6 +125,33 @@ rule-providers:
     type: http
     path: ./ruleset/lihawhaw-didi.yaml
     url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/didi.yaml"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: yaml
+    size-limit: 0
+  lihawhaw-ai-service:
+    type: http
+    path: ./ruleset/lihawhaw-ai-service.yaml
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/ai-service.yaml"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: yaml
+    size-limit: 0
+  lihawhaw-tiktok:
+    type: http
+    path: ./ruleset/lihawhaw-tiktok.yaml
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/tiktok.yaml"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: yaml
+    size-limit: 0
+  lihawhaw-twitter:
+    type: http
+    path: ./ruleset/lihawhaw-twitter.yaml
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/twitter.yaml"
     interval: 600
     proxy: DIRECT
     behavior: classical
