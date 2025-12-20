@@ -1,0 +1,10 @@
+payload:
+  - DOMAIN,support.tiktok.com
+  - DOMAIN-SUFFIX,tiktok.com
+  - DOMAIN,mcs-sg.tiktokv.com
+  - DOMAIN-SUFFIX,tiktokv.com
+  - DOMAIN,p16-sign-sg.tiktokcdn.com
+  - DOMAIN-SUFFIX,tiktokcdn.com
+  - DOMAIN,mon.tiktokv.com
+  - DOMAIN,sf16-website-login.neutral.ttwstatic.com
+  - DOMAIN-SUFFIX,ttwstatic.com
