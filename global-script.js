@@ -124,7 +124,7 @@ function getProxyGroups({ directRuleName, proxyRuleName }) {
   ];
 }
 
-function main(config, profileName) {
+function main(config, profileName = "管人痴") {
   const ruleNames = getRuleName(profileName);
   const { direct: directRuleName, proxy: proxyRuleName, ai: aiRuleName, didi: didiRuleName, tiktok: tiktokRuleName, twitter: twitterRuleName } = ruleNames;
 
