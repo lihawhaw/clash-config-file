@@ -1,0 +1,213 @@
+# Profile Enhancement Merge Template for Clash Verge
+
+profile:
+  store-selected: true
+dns:
+  enable: true
+  listen: ":53"
+  enhanced-mode: "fake-ip"
+  fake-ip-range: "198.18.0.1/16"
+  fake-ip-filter-mode: "blacklist"
+  prefer-h3: false
+  respect-rules: true
+  use-hosts: false
+  use-system-hosts: false
+  ipv6: true
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "*.arpa"
+    - "time.*.com"
+    - "ntp.*.com"
+    - "+.ntp.org"
+    - "time.*.com"
+    - "+.market.xiaomi.com"
+    - "connect.rom.miui.com"
+    - "+.miwifi.com"
+    - "localhost.ptlogin2.qq.com"
+    - "localhost.sec.qq.com"
+    - "localhost.work.weixin.qq.com"
+    - "+.weixin.qq.com"
+    - "+.wechat.com"
+    - "+.msftncsi.com"
+    - "+.msftconnecttest.com"
+    - "+.lihaha.cn"
+    - "+.xiaojukeji.com"
+    - "+.didichuxing.com"
+    - "+.didiglobal.com"
+    - "+.didi.cn"
+    - "+.didipay.com"
+    - "+.diditaxi.com.cn"
+  default-nameserver:
+    - "system"
+    - "223.6.6.6"
+    - "8.8.8.8"
+    - "2400:3200::1"
+    - "2001:4860:4860::8888"
+  nameserver:
+    - "https://dns.alidns.com/dns-query"
+    - "https://doh.pub/dns-query"
+    - "https://doh.360.cn/dns-query"
+    - "https://1.1.1.1/dns-query"
+    - "https://1.0.0.1/dns-query"
+    - "https://208.67.222.222/dns-query"
+    - "https://208.67.220.220/dns-query"
+    - "https://194.242.2.2/dns-query"
+    - "https://194.242.2.3/dns-query"
+    - "tls://223.5.5.5"
+  direct-nameserver-follow-policy: true
+  fallback-filter:
+    geoip: true
+    geoip-code: "CN"
+    ipcidr:
+      - "240.0.0.0/4"
+      - "0.0.0.0/32"
+    domain:
+      - "+.google.com"
+      - "+.facebook.com"
+      - "+.youtube.com"
+  fallback: []
+  proxy-server-nameserver:
+    - "https://dns.alidns.com/dns-query"
+    - "https://doh.pub/dns-query"
+    - "https://doh.360.cn/dns-query"
+    - "https://1.1.1.1/dns-query"
+    - "https://1.0.0.1/dns-query"
+    - "https://208.67.222.222/dns-query"
+    - "https://208.67.220.220/dns-query"
+    - "https://194.242.2.2/dns-query"
+    - "https://194.242.2.3/dns-query"
+    - "tls://223.5.5.5"
+  direct-nameserver: []
+  nameserver-policy:
+    "+.lihaha.cn": ["223.6.6.6", "223.5.5.5"]
+    "+.didichuxing.com":
+      - "ns1.didiwuxian.com"
+      - "172.23.128.1"
+      - "172.23.128.2"
+    "+.didiglobal.com":
+      - "ns1.didiwuxian.com"
+      - "172.23.128.1"
+      - "172.23.128.2"
+    "+.xiaojukeji.com":
+      - "ns1.didiwuxian.com"
+      - "172.23.128.1"
+      - "172.23.128.2"
+    "+.didi.cn":
+      - "ns1.didiwuxian.com"
+      - "172.23.128.1"
+      - "172.23.128.2"
+    "+.didipay.com":
+      - "ns1.didiwuxian.com"
+      - "172.23.128.1"
+      - "172.23.128.2"
+    "+.diditaxi.com.cn":
+      - "ns1.didiwuxian.com"
+      - "172.23.128.1"
+      - "172.23.128.2"
+    "geosite:didi":
+      - "ns1.didiwuxian.com"
+      - "172.23.128.1"
+      - "172.23.128.2"
+    "geosite:private,cn,geolocation-cn":
+      - "https://dns.alidns.com/dns-query"
+      - "https://doh.pub/dns-query"
+      - "https://doh.360.cn/dns-query"
+    "geosite:google,youtube,telegram,gfw,github,geolocation-!cn":
+      - "https://1.1.1.1/dns-query"
+      - "https://1.0.0.1/dns-query"
+      - "https://208.67.222.222/dns-query"
+      - "https://208.67.220.220/dns-query"
+      - "https://194.242.2.2/dns-query"
+      - "https://194.242.2.3/dns-query"
+rule-providers:
+  lihawhaw-didi:
+    type: http
+    path: ./ruleset/lihawhaw-didi.yaml
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/didi.yaml"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: yaml
+    size-limit: 0
+  lihawhaw-ai-service:
+    type: http
+    path: ./ruleset/lihawhaw-ai-service.yaml
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/ai-service.yaml"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: yaml
+    size-limit: 0
+  lihawhaw-tiktok:
+    type: http
+    path: ./ruleset/lihawhaw-tiktok.yaml
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/tiktok.yaml"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: yaml
+    size-limit: 0
+  lihawhaw-twitter:
+    type: http
+    path: ./ruleset/lihawhaw-twitter.yaml
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/twitter.yaml"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: yaml
+    size-limit: 0
+  lihawhaw-proxy:
+    type: http
+    path: ./ruleset/lihawhaw-proxy.yaml
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/proxy.yaml"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: yaml
+    size-limit: 0
+  lihawhaw-direct:
+    type: http
+    path: ./ruleset/lihawhaw-direct.yaml
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/direct.yaml"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: yaml
+    size-limit: 0
+  loyalsoldier-google:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+    path: ./ruleset/loyalsoldier-google.yaml
+    interval: 86400
+  loyalsoldier-proxy:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: ./ruleset/loyalsoldier-proxy.yaml
+    interval: 86400
+  loyalsoldier-direct:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./ruleset/loyalsoldier-direct.yaml
+    interval: 86400
+  loyalsoldier-private:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/loyalsoldier-private.yaml
+    interval: 86400
+  loyalsoldier-gfw:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    path: ./ruleset/loyalsoldier-gfw.yaml
+    interval: 86400
+  loyalsoldier-cncidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+    path: ./ruleset/loyalsoldier-cncidr.yaml
+    interval: 86400
