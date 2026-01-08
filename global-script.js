@@ -20,8 +20,8 @@ function getRuleName(profileName) {
   const map = {
     管人痴: {
       ...defaultRuleName,
-      direct: "🚀直接连接",
-      proxy: "🔰国外流量",
+      direct: "🎯 Direct",
+      proxy: "🔰 手动选择",
     },
     AntLink: {
       ...defaultRuleName,
@@ -33,6 +33,8 @@ function getRuleName(profileName) {
 
 /** 国内DNS服务器 */
 const domesticNameservers = [
+  "https://111169-03ie2axps6j4mo9r.alidns.com/dns-query", // 阿里云个人移动解析
+  "https://111169.alidns.com/dns-query", // 阿里云个人移动解析
   "https://dns.alidns.com/dns-query", // 阿里云公共DNS
   "https://doh.pub/dns-query", // 腾讯DNSPod
   "https://doh.360.cn/dns-query", // 360安全DNS
@@ -70,6 +72,13 @@ function getPrependRule({ directRuleName, proxyRuleName, aiRuleName, didiRuleNam
     `RULE-SET,loyalsoldier-gfw,${proxyRuleName}`,
     `DOMAIN,ping0.cc,${proxyRuleName}`,
     `DOMAIN-SUFFIX,ping0.cc,${proxyRuleName}`,
+    `DOMAIN,static-2v.gitbook.com,${proxyRuleName}`,
+    `DOMAIN-SUFFIX,gitbook.com,${proxyRuleName}`,
+    `DOMAIN-SUFFIX,google-analytics.com,${proxyRuleName}`,
+    `DOMAIN-SUFFIX,aliyun.com,${directRuleName}`,
+    `DOMAIN-SUFFIX,console.aliyun.com,${directRuleName}`,
+    `DOMAIN,docs.claude-mem.ai,${proxyRuleName}`,
+    `DOMAIN-SUFFIX,claude-mem.ai,${proxyRuleName}`,
   ];
 }
 
