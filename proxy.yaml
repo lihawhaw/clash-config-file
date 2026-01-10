@@ -194,8 +194,6 @@ payload:
   - DOMAIN,api.rustdesk.com
   - DOMAIN,www.palantir.com
   - DOMAIN-SUFFIX,palantir.com
-  - DOMAIN,cursor.sh
-  - DOMAIN-SUFFIX,cursor.sh
   - DOMAIN-SUFFIX,npmtrends.com
   - DOMAIN,npm-trends-proxy.uidotdev.workers.dev
   - DOMAIN-SUFFIX,mdnplay.dev
@@ -239,9 +237,6 @@ payload:
   - DOMAIN-SUFFIX,twitterstat.us
   - DOMAIN,starchart.cc
   - DOMAIN,www.clashverge.dev
-  - DOMAIN,code.claude.com
-  - DOMAIN,claude.com
-  - DOMAIN-SUFFIX,claude.com
   - DOMAIN,mintcdn.com
   - DOMAIN-SUFFIX,mintcdn.com
   - DOMAIN,unofficial-builds.nodejs.org

@@ -3,6 +3,8 @@ const customProxyGroupsNames = {
   anthropic: "✨Anthropic",
   openai: "✨OpenAI",
   gemini: "✨Gemini",
+  grok: "✨Grok",
+  cursor: "✨Cursor",
   didi: "🚕滴滴直连",
   tiktok: "🎬TikTok",
   twitter: "📣Twitter",
@@ -16,6 +18,8 @@ function getRuleName(profileName) {
     anthropic: customProxyGroupsNames.anthropic,
     openai: customProxyGroupsNames.openai,
     gemini: customProxyGroupsNames.gemini,
+    grok: customProxyGroupsNames.grok,
+    cursor: customProxyGroupsNames.cursor,
     didi: customProxyGroupsNames.didi,
     tiktok: customProxyGroupsNames.tiktok,
     twitter: customProxyGroupsNames.twitter,
@@ -24,7 +28,6 @@ function getRuleName(profileName) {
   const map = {
     管人痴: {
       ...defaultRuleName,
-      direct: "🎯 Direct",
       proxy: "🔰 手动选择",
     },
     AntLink: {
@@ -58,13 +61,15 @@ const foreignNameservers = [
  * @param proxyRuleName 代理的规则名称
  * @returns 规则数组
  */
-function getPrependRule({ directRuleName, proxyRuleName, anthropicRuleName, openaiRuleName, geminiRuleName, didiRuleName, tiktokRuleName, twitterRuleName }) {
+function getPrependRule({ directRuleName, proxyRuleName, anthropicRuleName, openaiRuleName, geminiRuleName, grokRuleName, cursorRuleName, didiRuleName, tiktokRuleName, twitterRuleName }) {
   return [
     `RULE-SET,lihawhaw-didi,${didiRuleName}`,
     `RULE-SET,lihawhaw-direct,${directRuleName}`,
     `RULE-SET,lihawhaw-anthropic,${anthropicRuleName}`,
     `RULE-SET,lihawhaw-openai,${openaiRuleName}`,
     `RULE-SET,lihawhaw-gemini,${geminiRuleName}`,
+    `RULE-SET,lihawhaw-grok,${grokRuleName}`,
+    `RULE-SET,lihawhaw-cursor,${cursorRuleName}`,
     `RULE-SET,lihawhaw-tiktok,${tiktokRuleName}`,
     `RULE-SET,lihawhaw-twitter,${twitterRuleName}`,
     `RULE-SET,lihawhaw-proxy,${proxyRuleName}`,
@@ -99,30 +104,88 @@ function getProxyGroups({ directRuleName, proxyRuleName }) {
   return [
     {
       ...groupBaseOption,
-      name: customProxyGroupsNames.anthropic,
+      name: `${customProxyGroupsNames.anthropic}`,
+      type: "select",
+      proxies: [`${customProxyGroupsNames.anthropic}自动选择`, proxyRuleName, directRuleName],
+      "include-all-proxies": true,
+    },
+    {
+      ...groupBaseOption,
+      name: `${customProxyGroupsNames.anthropic}自动选择`,
       type: "url-test",
       url: "https://www.anthropic.com/favicon.ico",
       tolerance: 50,
       proxies: [proxyRuleName, directRuleName],
       "include-all-proxies": true,
+      filter: "^(?!.*香港|.*Direct|.*手动选择).*$",
     },
     {
       ...groupBaseOption,
-      name: customProxyGroupsNames.openai,
+      name: `${customProxyGroupsNames.openai}`,
+      type: "select",
+      proxies: [`${customProxyGroupsNames.openai}自动选择`, proxyRuleName, directRuleName],
+      "include-all-proxies": true,
+    },
+    {
+      ...groupBaseOption,
+      name: `${customProxyGroupsNames.openai}自动选择`,
       type: "url-test",
       url: "https://chat.openai.com",
       tolerance: 50,
       proxies: [proxyRuleName, directRuleName],
       "include-all-proxies": true,
+      filter: "^(?!.*香港|.*Direct|.*手动选择).*$",
     },
     {
       ...groupBaseOption,
-      name: customProxyGroupsNames.gemini,
+      name: `${customProxyGroupsNames.gemini}`,
+      type: "select",
+      proxies: [`${customProxyGroupsNames.gemini}自动选择`, proxyRuleName, directRuleName],
+      "include-all-proxies": true,
+    },
+    {
+      ...groupBaseOption,
+      name: `${customProxyGroupsNames.gemini}自动选择`,
       type: "url-test",
       url: "https://ai.google.com",
       tolerance: 50,
       proxies: [proxyRuleName, directRuleName],
       "include-all-proxies": true,
+      filter: "^(?!.*香港|.*Direct|.*手动选择).*$",
+    },
+    {
+      ...groupBaseOption,
+      name: customProxyGroupsNames.grok,
+      type: "select",
+      proxies: [`${customProxyGroupsNames.grok}自动选择`, proxyRuleName, directRuleName],
+      "include-all-proxies": true,
+    },
+    {
+      ...groupBaseOption,
+      name: `${customProxyGroupsNames.grok}自动选择`,
+      type: "url-test",
+      url: "https://x.ai/favicon.ico",
+      tolerance: 50,
+      proxies: [proxyRuleName, directRuleName],
+      "include-all-proxies": true,
+      filter: "^(?!.*香港|.*Direct|.*手动选择).*$",
+    },
+    {
+      ...groupBaseOption,
+      name: customProxyGroupsNames.cursor,
+      type: "select",
+      proxies: [`${customProxyGroupsNames.cursor}自动选择`, proxyRuleName, directRuleName],
+      "include-all-proxies": true,
+    },
+    {
+      ...groupBaseOption,
+      name: `${customProxyGroupsNames.cursor}自动选择`,
+      type: "url-test",
+      url: "https://api2.cursor.sh",
+      tolerance: 50,
+      proxies: [proxyRuleName, directRuleName],
+      "include-all-proxies": true,
+      filter: "^(?!.*香港|.*Direct|.*手动选择).*$",
     },
     {
       ...groupBaseOption,
@@ -150,10 +213,10 @@ function getProxyGroups({ directRuleName, proxyRuleName }) {
 
 function main(config, profileName = "管人痴") {
   const ruleNames = getRuleName(profileName);
-  const { direct: directRuleName, proxy: proxyRuleName, anthropic: anthropicRuleName, openai: openaiRuleName, gemini: geminiRuleName, didi: didiRuleName, tiktok: tiktokRuleName, twitter: twitterRuleName } = ruleNames;
+  const { direct: directRuleName, proxy: proxyRuleName, anthropic: anthropicRuleName, openai: openaiRuleName, gemini: geminiRuleName, grok: grokRuleName, cursor: cursorRuleName, didi: didiRuleName, tiktok: tiktokRuleName, twitter: twitterRuleName } = ruleNames;
 
   let oldRules = config["rules"];
-  config["rules"] = getPrependRule({ directRuleName, proxyRuleName, anthropicRuleName, openaiRuleName, geminiRuleName, didiRuleName, tiktokRuleName, twitterRuleName }).concat(oldRules);
+  config["rules"] = getPrependRule({ directRuleName, proxyRuleName, anthropicRuleName, openaiRuleName, geminiRuleName, grokRuleName, cursorRuleName, didiRuleName, tiktokRuleName, twitterRuleName }).concat(oldRules);
 
   config["proxy-groups"] = config["proxy-groups"].slice(0, -1).concat(getProxyGroups({ directRuleName, proxyRuleName })).concat(config["proxy-groups"].slice(-1));
   return config;

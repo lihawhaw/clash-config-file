@@ -1,0 +1,8 @@
+payload:
+  # Cursor
+  - DOMAIN,cursor.com
+  - DOMAIN-SUFFIX,cursor.com
+  - DOMAIN,cursor.sh
+  - DOMAIN-SUFFIX,cursor.sh
+  - DOMAIN,marketplace.cursorapi.com
+  - DOMAIN-SUFFIX,cursorapi.com

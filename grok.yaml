@@ -1,0 +1,4 @@
+payload:
+  # Grok (x.ai)
+  - DOMAIN,x.ai
+  - DOMAIN-SUFFIX,x.ai

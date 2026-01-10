@@ -157,6 +157,24 @@ rule-providers:
     behavior: classical
     format: yaml
     size-limit: 0
+  lihawhaw-grok:
+    type: http
+    path: ./ruleset/lihawhaw-grok.yaml
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/grok.yaml"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: yaml
+    size-limit: 0
+  lihawhaw-cursor:
+    type: http
+    path: ./ruleset/lihawhaw-cursor.yaml
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/cursor.yaml"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: yaml
+    size-limit: 0
   lihawhaw-tiktok:
     type: http
     path: ./ruleset/lihawhaw-tiktok.yaml
