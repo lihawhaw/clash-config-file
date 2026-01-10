@@ -1,6 +1,8 @@
 /** 规则名称映射 */
 const customProxyGroupsNames = {
-  ai: "✨国外模型",
+  anthropic: "✨Anthropic",
+  openai: "✨OpenAI",
+  gemini: "✨Gemini",
   didi: "🚕滴滴直连",
   tiktok: "🎬TikTok",
   twitter: "📣Twitter",
@@ -11,7 +13,9 @@ function getRuleName(profileName) {
   const defaultRuleName = {
     direct: "DIRECT",
     proxy: "DIRECT",
-    ai: customProxyGroupsNames.ai,
+    anthropic: customProxyGroupsNames.anthropic,
+    openai: customProxyGroupsNames.openai,
+    gemini: customProxyGroupsNames.gemini,
     didi: customProxyGroupsNames.didi,
     tiktok: customProxyGroupsNames.tiktok,
     twitter: customProxyGroupsNames.twitter,
@@ -20,8 +24,8 @@ function getRuleName(profileName) {
   const map = {
     管人痴: {
       ...defaultRuleName,
-      direct: "🚀直接连接",
-      proxy: "🔰国外流量",
+      direct: "🎯 Direct",
+      proxy: "🔰 手动选择",
     },
     AntLink: {
       ...defaultRuleName,
@@ -54,11 +58,13 @@ const foreignNameservers = [
  * @param proxyRuleName 代理的规则名称
  * @returns 规则数组
  */
-function getPrependRule({ directRuleName, proxyRuleName, aiRuleName, didiRuleName, tiktokRuleName, twitterRuleName }) {
+function getPrependRule({ directRuleName, proxyRuleName, anthropicRuleName, openaiRuleName, geminiRuleName, didiRuleName, tiktokRuleName, twitterRuleName }) {
   return [
     `RULE-SET,lihawhaw-didi,${didiRuleName}`,
     `RULE-SET,lihawhaw-direct,${directRuleName}`,
-    `RULE-SET,lihawhaw-ai-service,${aiRuleName}`,
+    `RULE-SET,lihawhaw-anthropic,${anthropicRuleName}`,
+    `RULE-SET,lihawhaw-openai,${openaiRuleName}`,
+    `RULE-SET,lihawhaw-gemini,${geminiRuleName}`,
     `RULE-SET,lihawhaw-tiktok,${tiktokRuleName}`,
     `RULE-SET,lihawhaw-twitter,${twitterRuleName}`,
     `RULE-SET,lihawhaw-proxy,${proxyRuleName}`,
@@ -93,12 +99,30 @@ function getProxyGroups({ directRuleName, proxyRuleName }) {
   return [
     {
       ...groupBaseOption,
-      name: customProxyGroupsNames.ai,
-      type: "select",
+      name: customProxyGroupsNames.anthropic,
+      type: "url-test",
+      url: "https://www.anthropic.com/favicon.ico",
+      tolerance: 50,
       proxies: [proxyRuleName, directRuleName],
-      //   'include-all': true,
       "include-all-proxies": true,
-      //   'include-all-providers': true,
+    },
+    {
+      ...groupBaseOption,
+      name: customProxyGroupsNames.openai,
+      type: "url-test",
+      url: "https://chat.openai.com",
+      tolerance: 50,
+      proxies: [proxyRuleName, directRuleName],
+      "include-all-proxies": true,
+    },
+    {
+      ...groupBaseOption,
+      name: customProxyGroupsNames.gemini,
+      type: "url-test",
+      url: "https://ai.google.com",
+      tolerance: 50,
+      proxies: [proxyRuleName, directRuleName],
+      "include-all-proxies": true,
     },
     {
       ...groupBaseOption,
@@ -126,10 +150,10 @@ function getProxyGroups({ directRuleName, proxyRuleName }) {
 
 function main(config, profileName = "管人痴") {
   const ruleNames = getRuleName(profileName);
-  const { direct: directRuleName, proxy: proxyRuleName, ai: aiRuleName, didi: didiRuleName, tiktok: tiktokRuleName, twitter: twitterRuleName } = ruleNames;
+  const { direct: directRuleName, proxy: proxyRuleName, anthropic: anthropicRuleName, openai: openaiRuleName, gemini: geminiRuleName, didi: didiRuleName, tiktok: tiktokRuleName, twitter: twitterRuleName } = ruleNames;
 
   let oldRules = config["rules"];
-  config["rules"] = getPrependRule({ directRuleName, proxyRuleName, aiRuleName, didiRuleName, tiktokRuleName, twitterRuleName }).concat(oldRules);
+  config["rules"] = getPrependRule({ directRuleName, proxyRuleName, anthropicRuleName, openaiRuleName, geminiRuleName, didiRuleName, tiktokRuleName, twitterRuleName }).concat(oldRules);
 
   config["proxy-groups"] = config["proxy-groups"].slice(0, -1).concat(getProxyGroups({ directRuleName, proxyRuleName })).concat(config["proxy-groups"].slice(-1));
   return config;

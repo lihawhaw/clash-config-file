@@ -130,10 +130,28 @@ rule-providers:
     behavior: classical
     format: yaml
     size-limit: 0
-  lihawhaw-ai-service:
+  lihawhaw-anthropic:
     type: http
-    path: ./ruleset/lihawhaw-ai-service.yaml
-    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/ai-service.yaml"
+    path: ./ruleset/lihawhaw-anthropic.yaml
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/anthropic.yaml"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: yaml
+    size-limit: 0
+  lihawhaw-openai:
+    type: http
+    path: ./ruleset/lihawhaw-openai.yaml
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/openai.yaml"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: yaml
+    size-limit: 0
+  lihawhaw-gemini:
+    type: http
+    path: ./ruleset/lihawhaw-gemini.yaml
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/gemini.yaml"
     interval: 600
     proxy: DIRECT
     behavior: classical
