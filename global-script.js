@@ -115,9 +115,10 @@ function getProxyGroups({ directRuleName, proxyRuleName }) {
       type: "url-test",
       url: "https://www.anthropic.com/favicon.ico",
       tolerance: 50,
-      proxies: [proxyRuleName, directRuleName],
+      proxies: [],
       "include-all-proxies": true,
       filter: "^(?!.*香港|.*Direct|.*手动选择).*$",
+      hidden: true,
     },
     {
       ...groupBaseOption,
@@ -132,9 +133,10 @@ function getProxyGroups({ directRuleName, proxyRuleName }) {
       type: "url-test",
       url: "https://chat.openai.com",
       tolerance: 50,
-      proxies: [proxyRuleName, directRuleName],
+      proxies: [],
       "include-all-proxies": true,
       filter: "^(?!.*香港|.*Direct|.*手动选择).*$",
+      hidden: true,
     },
     {
       ...groupBaseOption,
@@ -149,9 +151,10 @@ function getProxyGroups({ directRuleName, proxyRuleName }) {
       type: "url-test",
       url: "https://ai.google.com",
       tolerance: 50,
-      proxies: [proxyRuleName, directRuleName],
+      proxies: [],
       "include-all-proxies": true,
       filter: "^(?!.*香港|.*Direct|.*手动选择).*$",
+      hidden: true,
     },
     {
       ...groupBaseOption,
@@ -166,9 +169,10 @@ function getProxyGroups({ directRuleName, proxyRuleName }) {
       type: "url-test",
       url: "https://x.ai/favicon.ico",
       tolerance: 50,
-      proxies: [proxyRuleName, directRuleName],
+      proxies: [],
       "include-all-proxies": true,
       filter: "^(?!.*香港|.*Direct|.*手动选择).*$",
+      hidden: true,
     },
     {
       ...groupBaseOption,
@@ -183,9 +187,10 @@ function getProxyGroups({ directRuleName, proxyRuleName }) {
       type: "url-test",
       url: "https://api2.cursor.sh",
       tolerance: 50,
-      proxies: [proxyRuleName, directRuleName],
+      proxies: [],
       "include-all-proxies": true,
       filter: "^(?!.*香港|.*Direct|.*手动选择).*$",
+      hidden: true,
     },
     {
       ...groupBaseOption,
@@ -213,10 +218,32 @@ function getProxyGroups({ directRuleName, proxyRuleName }) {
 
 function main(config, profileName = "管人痴") {
   const ruleNames = getRuleName(profileName);
-  const { direct: directRuleName, proxy: proxyRuleName, anthropic: anthropicRuleName, openai: openaiRuleName, gemini: geminiRuleName, grok: grokRuleName, cursor: cursorRuleName, didi: didiRuleName, tiktok: tiktokRuleName, twitter: twitterRuleName } = ruleNames;
+  const {
+    direct: directRuleName,
+    proxy: proxyRuleName,
+    anthropic: anthropicRuleName,
+    openai: openaiRuleName,
+    gemini: geminiRuleName,
+    grok: grokRuleName,
+    cursor: cursorRuleName,
+    didi: didiRuleName,
+    tiktok: tiktokRuleName,
+    twitter: twitterRuleName,
+  } = ruleNames;
 
   let oldRules = config["rules"];
-  config["rules"] = getPrependRule({ directRuleName, proxyRuleName, anthropicRuleName, openaiRuleName, geminiRuleName, grokRuleName, cursorRuleName, didiRuleName, tiktokRuleName, twitterRuleName }).concat(oldRules);
+  config["rules"] = getPrependRule({
+    directRuleName,
+    proxyRuleName,
+    anthropicRuleName,
+    openaiRuleName,
+    geminiRuleName,
+    grokRuleName,
+    cursorRuleName,
+    didiRuleName,
+    tiktokRuleName,
+    twitterRuleName,
+  }).concat(oldRules);
 
   config["proxy-groups"] = config["proxy-groups"].slice(0, -1).concat(getProxyGroups({ directRuleName, proxyRuleName })).concat(config["proxy-groups"].slice(-1));
   return config;
