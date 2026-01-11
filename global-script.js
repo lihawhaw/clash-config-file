@@ -1,3 +1,147 @@
+/**
+ * 订阅配置 [订阅名称: 对应的代理组名称]
+ */
+const profileProxyNames = {
+  管人痴: "🔰 手动选择",
+  AntLink: "AntLink",
+};
+
+/**
+ * 规则集合
+ */
+const ruleProviders = {
+  "lihawhaw-didi": {
+    type: "http",
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/didi.yaml",
+    path: "./ruleset/lihawhaw-didi.yaml",
+    interval: 600,
+    behavior: "classical",
+    format: "yaml",
+  },
+  "lihawhaw-direct": {
+    type: "http",
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/direct.yaml",
+    path: "./ruleset/lihawhaw-direct.yaml",
+    interval: 600,
+    behavior: "classical",
+    format: "yaml",
+  },
+  "lihawhaw-anthropic": {
+    type: "http",
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/anthropic.yaml",
+    path: "./ruleset/lihawhaw-anthropic.yaml",
+    interval: 600,
+    behavior: "classical",
+    format: "yaml",
+  },
+  "lihawhaw-openai": {
+    type: "http",
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/openai.yaml",
+    path: "./ruleset/lihawhaw-openai.yaml",
+    interval: 600,
+    behavior: "classical",
+    format: "yaml",
+  },
+  "lihawhaw-gemini": {
+    type: "http",
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/gemini.yaml",
+    path: "./ruleset/lihawhaw-gemini.yaml",
+    interval: 600,
+    behavior: "classical",
+    format: "yaml",
+  },
+  "lihawhaw-grok": {
+    type: "http",
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/grok.yaml",
+    path: "./ruleset/lihawhaw-grok.yaml",
+    interval: 600,
+    behavior: "classical",
+    format: "yaml",
+  },
+  "lihawhaw-cursor": {
+    type: "http",
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/cursor.yaml",
+    path: "./ruleset/lihawhaw-cursor.yaml",
+    interval: 600,
+    behavior: "classical",
+    format: "yaml",
+  },
+  "lihawhaw-github": {
+    type: "http",
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/github.yaml",
+    path: "./ruleset/lihawhaw-github.yaml",
+    interval: 600,
+    behavior: "classical",
+    format: "yaml",
+  },
+  "lihawhaw-tiktok": {
+    type: "http",
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/tiktok.yaml",
+    path: "./ruleset/lihawhaw-tiktok.yaml",
+    interval: 600,
+    behavior: "classical",
+    format: "yaml",
+  },
+  "lihawhaw-twitter": {
+    type: "http",
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/twitter.yaml",
+    path: "./ruleset/lihawhaw-twitter.yaml",
+    interval: 600,
+    behavior: "classical",
+    format: "yaml",
+  },
+  "lihawhaw-proxy": {
+    type: "http",
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/proxy.yaml",
+    path: "./ruleset/lihawhaw-proxy.yaml",
+    interval: 600,
+    behavior: "classical",
+    format: "yaml",
+  },
+  "loyalsoldier-direct": {
+    type: "http",
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt",
+    path: "./ruleset/loyalsoldier-direct.yaml",
+    interval: 86400,
+    behavior: "domain",
+  },
+  "loyalsoldier-private": {
+    type: "http",
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt",
+    path: "./ruleset/loyalsoldier-private.yaml",
+    interval: 86400,
+    behavior: "domain",
+  },
+  "loyalsoldier-cncidr": {
+    type: "http",
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt",
+    path: "./ruleset/loyalsoldier-cncidr.yaml",
+    interval: 86400,
+    behavior: "ipcidr",
+  },
+  "loyalsoldier-google": {
+    type: "http",
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt",
+    path: "./ruleset/loyalsoldier-google.yaml",
+    interval: 86400,
+    behavior: "domain",
+  },
+  "loyalsoldier-proxy": {
+    type: "http",
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt",
+    path: "./ruleset/loyalsoldier-proxy.yaml",
+    interval: 86400,
+    behavior: "domain",
+  },
+  "loyalsoldier-gfw": {
+    type: "http",
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt",
+    path: "./ruleset/loyalsoldier-gfw.yaml",
+    interval: 86400,
+    behavior: "domain",
+  },
+};
+
 /** 规则名称映射 */
 const customProxyGroupsNames = {
   anthropic: "✨Anthropic",
@@ -11,10 +155,220 @@ const customProxyGroupsNames = {
   twitter: "📣Twitter",
 };
 
+/** 占位符映射 */
+const placeholderMapping = {
+  PROXY: "{{PROXY}}",
+  REGIONS: "{{REGIONS}}",
+  DIRECT: "DIRECT",
+};
+
 /**
- * 区域节点匹配规则
- * key: 区域显示名称
- * value: 匹配正则表达式（不区分大小写）
+ * 📜 rules
+ * 注意：使用 {{PROXY}} 占位符，会根据订阅自动替换为对应的代理组
+ */
+const rules = [
+  `RULE-SET,lihawhaw-didi,${customProxyGroupsNames.didi}`,
+  `RULE-SET,lihawhaw-direct,${placeholderMapping.DIRECT}`,
+  `RULE-SET,lihawhaw-anthropic,${customProxyGroupsNames.anthropic}`,
+  `RULE-SET,lihawhaw-openai,${customProxyGroupsNames.openai}`,
+  `RULE-SET,lihawhaw-gemini,${customProxyGroupsNames.gemini}`,
+  `RULE-SET,lihawhaw-grok,${customProxyGroupsNames.grok}`,
+  `RULE-SET,lihawhaw-cursor,${customProxyGroupsNames.cursor}`,
+  `RULE-SET,lihawhaw-github,${customProxyGroupsNames.github}`,
+  `RULE-SET,lihawhaw-tiktok,${customProxyGroupsNames.tiktok}`,
+  `RULE-SET,lihawhaw-twitter,${customProxyGroupsNames.twitter}`,
+  `RULE-SET,lihawhaw-proxy,${placeholderMapping.PROXY}`,
+  `RULE-SET,loyalsoldier-direct,${placeholderMapping.DIRECT}`,
+  `RULE-SET,loyalsoldier-private,${placeholderMapping.DIRECT}`,
+  `RULE-SET,loyalsoldier-cncidr,${placeholderMapping.DIRECT}`,
+  `RULE-SET,loyalsoldier-google,${placeholderMapping.PROXY}`,
+  `RULE-SET,loyalsoldier-proxy,${placeholderMapping.PROXY}`,
+  `RULE-SET,loyalsoldier-gfw,${placeholderMapping.PROXY}`,
+  `DOMAIN,ping0.cc,${placeholderMapping.PROXY}`,
+  `DOMAIN-SUFFIX,ping0.cc,${placeholderMapping.PROXY}`,
+  `DOMAIN,api.ipapi.is,${placeholderMapping.PROXY}`,
+  `DOMAIN-SUFFIX,ipapi.is,${placeholderMapping.PROXY}`,
+  `DOMAIN,agent.minimaxi.io,${placeholderMapping.PROXY}`,
+  `DOMAIN-SUFFIX,minimaxi.io,${placeholderMapping.PROXY}`,
+];
+
+/**
+ * 🎮 proxy-groups
+ * 特殊占位符：{{PROXY}} = 订阅的代理组，{{REGIONS}} = 动态检测的区域组
+ */
+const proxyGroups = [
+  // -------- AI 服务 --------
+  {
+    name: customProxyGroupsNames.anthropic,
+    type: "select",
+    proxies: [`${customProxyGroupsNames.anthropic}自动选择`, placeholderMapping.REGIONS, placeholderMapping.PROXY, placeholderMapping.DIRECT],
+  },
+  {
+    name: `${customProxyGroupsNames.anthropic}自动选择`,
+    type: "url-test",
+    url: "https://www.anthropic.com/favicon.ico",
+    tolerance: 80,
+    filter: "^(?!.*香港|.*HK|.*Hong Kong|.*Direct|.*手动选择).*$",
+    hidden: true,
+  },
+  {
+    name: customProxyGroupsNames.openai,
+    type: "select",
+    proxies: [`${customProxyGroupsNames.openai}自动选择`, placeholderMapping.REGIONS, placeholderMapping.PROXY, placeholderMapping.DIRECT],
+  },
+  {
+    name: `${customProxyGroupsNames.openai}自动选择`,
+    type: "url-test",
+    url: "https://chat.openai.com",
+    tolerance: 80,
+    filter: "^(?!.*香港|.*HK|.*Hong Kong|.*Direct|.*手动选择).*$",
+    hidden: true,
+  },
+  {
+    name: customProxyGroupsNames.gemini,
+    type: "select",
+    proxies: [`${customProxyGroupsNames.gemini}自动选择`, placeholderMapping.REGIONS, placeholderMapping.PROXY, placeholderMapping.DIRECT],
+  },
+  {
+    name: `${customProxyGroupsNames.gemini}自动选择`,
+    type: "url-test",
+    url: "https://ai.google.com",
+    tolerance: 80,
+    filter: "^(?!.*香港|.*HK|.*Hong Kong|.*Direct|.*手动选择).*$",
+    hidden: true,
+  },
+  {
+    name: customProxyGroupsNames.grok,
+    type: "select",
+    proxies: [`${customProxyGroupsNames.grok}自动选择`, placeholderMapping.REGIONS, placeholderMapping.PROXY, placeholderMapping.DIRECT],
+  },
+  {
+    name: `${customProxyGroupsNames.grok}自动选择`,
+    type: "url-test",
+    url: "https://x.ai/favicon.ico",
+    tolerance: 80,
+    filter: "^(?!.*香港|.*HK|.*Hong Kong|.*Direct|.*手动选择).*$",
+    hidden: true,
+  },
+  {
+    name: customProxyGroupsNames.cursor,
+    type: "select",
+    proxies: [`${customProxyGroupsNames.cursor}自动选择`, placeholderMapping.REGIONS, placeholderMapping.PROXY, placeholderMapping.DIRECT],
+  },
+  {
+    name: `${customProxyGroupsNames.cursor}自动选择`,
+    type: "url-test",
+    url: "https://api2.cursor.sh",
+    tolerance: 80,
+    filter: "^(?!.*香港|.*HK|.*Hong Kong|.*Direct|.*手动选择).*$",
+    hidden: true,
+  },
+  {
+    name: customProxyGroupsNames.github,
+    type: "select",
+    proxies: [`${customProxyGroupsNames.github}自动选择`, placeholderMapping.REGIONS, placeholderMapping.PROXY, placeholderMapping.DIRECT],
+  },
+  {
+    name: `${customProxyGroupsNames.github}自动选择`,
+    type: "url-test",
+    url: "https://github.com/favicon.ico",
+    tolerance: 80,
+    filter: "^(?!.*Direct|.*手动选择).*$",
+    hidden: true,
+  },
+  {
+    name: customProxyGroupsNames.tiktok,
+    type: "select",
+    proxies: [placeholderMapping.REGIONS, placeholderMapping.PROXY, placeholderMapping.DIRECT],
+  },
+  {
+    name: customProxyGroupsNames.twitter,
+    type: "select",
+    proxies: [placeholderMapping.REGIONS, placeholderMapping.PROXY, placeholderMapping.DIRECT],
+  },
+  {
+    name: customProxyGroupsNames.didi,
+    type: "select",
+    proxies: [placeholderMapping.DIRECT, placeholderMapping.PROXY],
+  },
+];
+
+/**
+ * DNS 服务器配置
+ */
+const domesticDns = ["https://dns.alidns.com/dns-query", "https://doh.pub/dns-query", "https://doh.360.cn/dns-query", "tls://223.5.5.5", "tls://223.6.6.6"];
+const foreignDns = [
+  "https://1.1.1.1/dns-query",
+  "https://1.0.0.1/dns-query",
+  "https://208.67.222.222/dns-query",
+  "https://208.67.220.220/dns-query",
+  "https://194.242.2.2/dns-query",
+  "https://194.242.2.3/dns-query",
+];
+const didiDns = ["ns1.didiwuxian.com", "172.23.128.1", "172.23.128.2"];
+
+/**
+ * DNS 配置
+ */
+const dnsConfig = {
+  enable: true,
+  listen: ":53",
+  "enhanced-mode": "fake-ip",
+  "fake-ip-range": "198.18.0.1/16",
+  "fake-ip-filter-mode": "blacklist",
+  "prefer-h3": false,
+  "respect-rules": true,
+  "use-hosts": false,
+  "use-system-hosts": false,
+  ipv6: true,
+  "fake-ip-filter": [
+    "*.lan",
+    "*.local",
+    "*.arpa",
+    "time.*.com",
+    "ntp.*.com",
+    "+.ntp.org",
+    "+.market.xiaomi.com",
+    "connect.rom.miui.com",
+    "+.miwifi.com",
+    "localhost.ptlogin2.qq.com",
+    "localhost.sec.qq.com",
+    "localhost.work.weixin.qq.com",
+    "+.weixin.qq.com",
+    "+.wechat.com",
+    "+.msftncsi.com",
+    "+.msftconnecttest.com",
+    "+.lihaha.cn",
+    "rule-set:lihawhaw-didi"
+    // "+.xiaojukeji.com",
+    // "+.didichuxing.com",
+    // "+.didiglobal.com",
+    // "+.didi.cn",
+    // "+.didipay.com",
+    // "+.diditaxi.com.cn",
+  ],
+  "default-nameserver": ["system", "223.6.6.6", "8.8.8.8", "2400:3200::1", "2001:4860:4860::8888"],
+  nameserver: [...domesticDns, ...foreignDns],
+  "proxy-server-nameserver": [...domesticDns, ...foreignDns],
+  "direct-nameserver-follow-policy": true,
+  "fallback-filter": {
+    geoip: true,
+    "geoip-code": "CN",
+    ipcidr: ["240.0.0.0/4", "0.0.0.0/32"],
+    domain: ["+.google.com", "+.facebook.com", "+.youtube.com"],
+  },
+  fallback: [],
+  "direct-nameserver": [],
+  "nameserver-policy": {
+    "+.lihaha.cn": ["223.6.6.6", "223.5.5.5"],
+    "+.didichuxing.com,+.didiglobal.com,+.xiaojukeji.com,+.didi.cn,+.didipay.com,+.diditaxi.com.cn,geosite:didi": didiDns,
+    "geosite:private,cn,geolocation-cn": domesticDns,
+    "geosite:google,youtube,telegram,gfw,github,geolocation-!cn": foreignDns,
+  },
+};
+
+/**
+ * 🌍 区域节点匹配规则（用于 TikTok 等需要区域分组的服务）
  */
 const regionPatterns = {
   "🇭🇰中国香港": /香港|HK|Hong\s*Kong|🇭🇰/i,
@@ -62,37 +416,39 @@ const regionPatterns = {
 };
 
 /**
+ * 🔧 groupBaseOption
+ */
+const groupBaseOption = {
+  interval: 300,
+  timeout: 3000,
+  url: "https://www.google.com/generate_204",
+  lazy: true,
+  "max-failed-times": 3,
+  "include-all-proxies": true,
+  hidden: false,
+};
+
+/**
  * 检测订阅中实际存在哪些区域的节点
- * @param {Array} proxies 代理节点列表
- * @returns {Object} { regionName: [proxyNames...] }
  */
 function detectRegions(proxies) {
   const regionNodes = {};
-
   for (const proxy of proxies) {
     const name = proxy.name || "";
     for (const [regionName, pattern] of Object.entries(regionPatterns)) {
       if (pattern.test(name)) {
-        if (!regionNodes[regionName]) {
-          regionNodes[regionName] = [];
-        }
+        if (!regionNodes[regionName]) regionNodes[regionName] = [];
         regionNodes[regionName].push(name);
-        break; // 每个节点只归属一个区域
+        break;
       }
     }
   }
-
   return regionNodes;
 }
 
-/**
- * 根据实际存在的区域生成代理组
- * @param {Object} regionNodes 区域节点映射
- * @returns {Array} 代理组数组
- */
+/** 生成区域代理组 */
 function generateRegionGroups(regionNodes) {
   const groups = [];
-
   for (const [regionName, nodeNames] of Object.entries(regionNodes)) {
     if (nodeNames.length > 0) {
       groups.push({
@@ -105,267 +461,83 @@ function generateRegionGroups(regionNodes) {
       });
     }
   }
-
   return groups;
 }
 
-/** 根据配置文件名称动态生成 rule 名称 */
-function getRuleName(profileName) {
-  const defaultRuleName = {
-    direct: "DIRECT",
-    proxy: "DIRECT",
-    anthropic: customProxyGroupsNames.anthropic,
-    openai: customProxyGroupsNames.openai,
-    gemini: customProxyGroupsNames.gemini,
-    grok: customProxyGroupsNames.grok,
-    cursor: customProxyGroupsNames.cursor,
-    github: customProxyGroupsNames.github,
-    didi: customProxyGroupsNames.didi,
-    tiktok: customProxyGroupsNames.tiktok,
-    twitter: customProxyGroupsNames.twitter,
-  };
-
-  const map = {
-    管人痴: {
-      ...defaultRuleName,
-      proxy: "🔰 手动选择",
-    },
-    AntLink: {
-      ...defaultRuleName,
-      proxy: "AntLink",
-    },
-  };
-  return map[profileName] || defaultRuleName;
-}
-
-/**
- * 配置中的规则"config.rules"是一个数组，通过新旧数组合并来添加
- * @param directRuleName 直接连接的规则名称
- * @param proxyRuleName 代理的规则名称
- * @returns 规则数组
- */
-function getPrependRule({ directRuleName, proxyRuleName, anthropicRuleName, openaiRuleName, geminiRuleName, grokRuleName, cursorRuleName, githubRuleName, didiRuleName, tiktokRuleName, twitterRuleName }) {
-  return [
-    `RULE-SET,lihawhaw-didi,${didiRuleName}`,
-    `RULE-SET,lihawhaw-direct,${directRuleName}`,
-    `RULE-SET,lihawhaw-anthropic,${anthropicRuleName}`,
-    `RULE-SET,lihawhaw-openai,${openaiRuleName}`,
-    `RULE-SET,lihawhaw-gemini,${geminiRuleName}`,
-    `RULE-SET,lihawhaw-grok,${grokRuleName}`,
-    `RULE-SET,lihawhaw-cursor,${cursorRuleName}`,
-    `RULE-SET,lihawhaw-github,${githubRuleName}`,
-    `RULE-SET,lihawhaw-tiktok,${tiktokRuleName}`,
-    `RULE-SET,lihawhaw-twitter,${twitterRuleName}`,
-    `RULE-SET,lihawhaw-proxy,${proxyRuleName}`,
-    `RULE-SET,loyalsoldier-direct,${directRuleName}`,
-    `RULE-SET,loyalsoldier-private,${directRuleName}`,
-    `RULE-SET,loyalsoldier-cncidr,${directRuleName}`,
-    `RULE-SET,loyalsoldier-google,${proxyRuleName}`,
-    `RULE-SET,loyalsoldier-proxy,${proxyRuleName}`,
-    `RULE-SET,loyalsoldier-gfw,${proxyRuleName}`,
-    `DOMAIN,ping0.cc,${proxyRuleName}`,
-    `DOMAIN-SUFFIX,ping0.cc,${proxyRuleName}`,
-  ];
-}
-
-/** 代理组通用配置 */
-const groupBaseOption = {
-  interval: 300,
-  timeout: 3000,
-  url: "https://www.google.com/generate_204",
-  lazy: true,
-  "max-failed-times": 3,
-  hidden: false,
-};
-
-/**
- * 代理组
- * @param directRuleName 直接连接的规则名称
- * @param proxyRuleName 代理的规则名称
- * @param availableRegions 可用的区域名称列表
- * @returns 代理组数组
- */
-function getProxyGroups({ directRuleName, proxyRuleName, availableRegions = [] }) {
-  return [
-    {
-      ...groupBaseOption,
-      name: `${customProxyGroupsNames.anthropic}`,
-      type: "select",
-      proxies: [`${customProxyGroupsNames.anthropic}自动选择`, proxyRuleName, directRuleName],
-      "include-all-proxies": true,
-    },
-    {
-      ...groupBaseOption,
-      name: `${customProxyGroupsNames.anthropic}自动选择`,
-      type: "url-test",
-      url: "https://www.anthropic.com/favicon.ico",
-      tolerance: 50,
-      proxies: [],
-      "include-all-proxies": true,
-      filter: "^(?!.*香港|.*Direct|.*手动选择).*$",
-      hidden: true,
-    },
-    {
-      ...groupBaseOption,
-      name: `${customProxyGroupsNames.openai}`,
-      type: "select",
-      proxies: [`${customProxyGroupsNames.openai}自动选择`, proxyRuleName, directRuleName],
-      "include-all-proxies": true,
-    },
-    {
-      ...groupBaseOption,
-      name: `${customProxyGroupsNames.openai}自动选择`,
-      type: "url-test",
-      url: "https://chat.openai.com",
-      tolerance: 50,
-      proxies: [],
-      "include-all-proxies": true,
-      filter: "^(?!.*香港|.*Direct|.*手动选择).*$",
-      hidden: true,
-    },
-    {
-      ...groupBaseOption,
-      name: `${customProxyGroupsNames.gemini}`,
-      type: "select",
-      proxies: [`${customProxyGroupsNames.gemini}自动选择`, proxyRuleName, directRuleName],
-      "include-all-proxies": true,
-    },
-    {
-      ...groupBaseOption,
-      name: `${customProxyGroupsNames.gemini}自动选择`,
-      type: "url-test",
-      url: "https://ai.google.com",
-      tolerance: 50,
-      proxies: [],
-      "include-all-proxies": true,
-      filter: "^(?!.*香港|.*Direct|.*手动选择).*$",
-      hidden: true,
-    },
-    {
-      ...groupBaseOption,
-      name: customProxyGroupsNames.grok,
-      type: "select",
-      proxies: [`${customProxyGroupsNames.grok}自动选择`, proxyRuleName, directRuleName],
-      "include-all-proxies": true,
-    },
-    {
-      ...groupBaseOption,
-      name: `${customProxyGroupsNames.grok}自动选择`,
-      type: "url-test",
-      url: "https://x.ai/favicon.ico",
-      tolerance: 50,
-      proxies: [],
-      "include-all-proxies": true,
-      filter: "^(?!.*香港|.*Direct|.*手动选择).*$",
-      hidden: true,
-    },
-    {
-      ...groupBaseOption,
-      name: customProxyGroupsNames.cursor,
-      type: "select",
-      proxies: [`${customProxyGroupsNames.cursor}自动选择`, proxyRuleName, directRuleName],
-      "include-all-proxies": true,
-    },
-    {
-      ...groupBaseOption,
-      name: `${customProxyGroupsNames.cursor}自动选择`,
-      type: "url-test",
-      url: "https://api2.cursor.sh",
-      tolerance: 50,
-      proxies: [],
-      "include-all-proxies": true,
-      filter: "^(?!.*香港|.*Direct|.*手动选择).*$",
-      hidden: true,
-    },
-    {
-      ...groupBaseOption,
-      name: customProxyGroupsNames.github,
-      type: "select",
-      proxies: [`${customProxyGroupsNames.github}自动选择`, proxyRuleName, directRuleName],
-      "include-all-proxies": true,
-    },
-    {
-      ...groupBaseOption,
-      name: `${customProxyGroupsNames.github}自动选择`,
-      type: "url-test",
-      url: "https://github.com/favicon.ico",
-      tolerance: 50,
-      proxies: [],
-      "include-all-proxies": true,
-      filter: "^(?!.*Direct|.*手动选择).*$",
-      hidden: true,
-    },
-    {
-      ...groupBaseOption,
-      name: customProxyGroupsNames.tiktok,
-      type: "select",
-      // 动态添加可用的区域组，然后是代理选择和所有节点
-      proxies: [...availableRegions, proxyRuleName],
-      "include-all-proxies": true,
-    },
-    {
-      ...groupBaseOption,
-      name: customProxyGroupsNames.twitter,
-      type: "select",
-      proxies: [proxyRuleName],
-      "include-all-proxies": true,
-    },
-    {
-      ...groupBaseOption,
-      name: customProxyGroupsNames.didi,
-      type: "select",
-      proxies: [directRuleName],
-      "include-all-proxies": true,
-    },
-  ];
+/** 替换占位符 */
+function replacePlaceholders(value, proxyName, regionNames) {
+  if (typeof value === "string") {
+    return value.replace(placeholderMapping.PROXY, proxyName);
+  }
+  if (Array.isArray(value)) {
+    const result = [];
+    for (const item of value) {
+      if (item === placeholderMapping.REGIONS) {
+        result.push(...regionNames);
+      } else if (typeof item === "string") {
+        result.push(item.replace(placeholderMapping.PROXY, proxyName));
+      } else {
+        result.push(item);
+      }
+    }
+    return result;
+  }
+  return value;
 }
 
 function main(config, profileName = "管人痴") {
-  const ruleNames = getRuleName(profileName);
-  const {
-    direct: directRuleName,
-    proxy: proxyRuleName,
-    anthropic: anthropicRuleName,
-    openai: openaiRuleName,
-    gemini: geminiRuleName,
-    grok: grokRuleName,
-    cursor: cursorRuleName,
-    github: githubRuleName,
-    didi: didiRuleName,
-    tiktok: tiktokRuleName,
-    twitter: twitterRuleName,
-  } = ruleNames;
+  const proxyName = profileProxyNames[profileName] || "DIRECT";
 
-  let oldRules = config["rules"];
-  config["rules"] = getPrependRule({
-    directRuleName,
-    proxyRuleName,
-    anthropicRuleName,
-    openaiRuleName,
-    geminiRuleName,
-    grokRuleName,
-    cursorRuleName,
-    githubRuleName,
-    didiRuleName,
-    tiktokRuleName,
-    twitterRuleName,
-  }).concat(oldRules);
+  // 合并 DNS 配置
+  config["dns"] = { ...dnsConfig, ...(config["dns"] || {}) };
 
-  // 检测订阅中实际存在的区域节点
+  // 合并 rule-providers
+  config["rule-providers"] = {
+    ...ruleProviders,
+    ...(config["rule-providers"] || {}),
+  };
+
+  // 合并规则（替换占位符）
+  const processedRules = rules.map((rule) => rule.replace(placeholderMapping.PROXY, proxyName));
+  config["rules"] = processedRules.concat(config["rules"] || []);
+
+  // 检测区域节点
   const proxies = config["proxies"] || [];
   const regionNodes = detectRegions(proxies);
-  const availableRegions = Object.keys(regionNodes);
+  const regionNames = Object.keys(regionNodes);
 
-  // 生成区域代理组（只包含实际存在的区域）
+  // 生成区域代理组
   const regionGroups = generateRegionGroups(regionNodes);
 
-  // 构建代理组：原有组 + 区域组 + 自定义组
+  // 处理代理组（替换占位符）
+  const processedProxyGroups = proxyGroups.map((group) => {
+    const newGroup = { ...groupBaseOption, ...group };
+    if (newGroup.proxies) {
+      newGroup.proxies = replacePlaceholders(newGroup.proxies, proxyName, regionNames);
+    }
+    return newGroup;
+  });
+
+  // 构建代理组
   const existingGroups = config["proxy-groups"] || [];
-  config["proxy-groups"] = existingGroups
-    .slice(0, -1)
-    .concat(regionGroups) // 插入动态生成的区域组
-    .concat(getProxyGroups({ directRuleName, proxyRuleName, availableRegions }))
-    .concat(existingGroups.slice(-1));
+
+  // 在出口代理组中添加区域分组
+  const updatedExistingGroups = existingGroups.map((group) => {
+    if (group.name === proxyName && regionNames.length > 0) {
+      const currentProxies = group.proxies || [];
+      // 提取"自动选择"项
+      const autoSelectProxies = currentProxies.filter((p) => p.includes("自动选择"));
+      const remainingProxies = currentProxies.filter((p) => !p.includes("自动选择"));
+      // 顺序：自动选择 → 区域分组 → 剩余项
+      return {
+        ...group,
+        proxies: [...autoSelectProxies, ...regionNames, ...remainingProxies],
+      };
+    }
+    return group;
+  });
+
+  config["proxy-groups"] = updatedExistingGroups.slice(0, -1).concat(regionGroups).concat(processedProxyGroups).concat(updatedExistingGroups.slice(-1));
 
   return config;
 }
