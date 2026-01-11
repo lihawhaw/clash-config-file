@@ -138,23 +138,6 @@ function getRuleName(profileName) {
   return map[profileName] || defaultRuleName;
 }
 
-/** 国内DNS服务器 */
-const domesticNameservers = [
-  "https://dns.alidns.com/dns-query", // 阿里云公共DNS
-  "https://doh.pub/dns-query", // 腾讯DNSPod
-  "https://doh.360.cn/dns-query", // 360安全DNS
-];
-
-/** 国外DNS服务器 */
-const foreignNameservers = [
-  "https://1.1.1.1/dns-query", // Cloudflare(主)
-  "https://1.0.0.1/dns-query", // Cloudflare(备)
-  "https://208.67.222.222/dns-query", // OpenDNS(主)
-  "https://208.67.220.220/dns-query", // OpenDNS(备)
-  "https://194.242.2.2/dns-query", // Mullvad(主)
-  "https://194.242.2.3/dns-query", // Mullvad(备)
-];
-
 /**
  * 配置中的规则"config.rules"是一个数组，通过新旧数组合并来添加
  * @param directRuleName 直接连接的规则名称

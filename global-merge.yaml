@@ -81,31 +81,7 @@ dns:
   direct-nameserver: []
   nameserver-policy:
     "+.lihaha.cn": ["223.6.6.6", "223.5.5.5"]
-    "+.didichuxing.com":
-      - "ns1.didiwuxian.com"
-      - "172.23.128.1"
-      - "172.23.128.2"
-    "+.didiglobal.com":
-      - "ns1.didiwuxian.com"
-      - "172.23.128.1"
-      - "172.23.128.2"
-    "+.xiaojukeji.com":
-      - "ns1.didiwuxian.com"
-      - "172.23.128.1"
-      - "172.23.128.2"
-    "+.didi.cn":
-      - "ns1.didiwuxian.com"
-      - "172.23.128.1"
-      - "172.23.128.2"
-    "+.didipay.com":
-      - "ns1.didiwuxian.com"
-      - "172.23.128.1"
-      - "172.23.128.2"
-    "+.diditaxi.com.cn":
-      - "ns1.didiwuxian.com"
-      - "172.23.128.1"
-      - "172.23.128.2"
-    "geosite:didi":
+    "+.didichuxing.com,+.didiglobal.com,+.xiaojukeji.com,+.didi.cn,+.didipay.com,+.diditaxi.com.cn,geosite:didi":
       - "ns1.didiwuxian.com"
       - "172.23.128.1"
       - "172.23.128.2"
