@@ -457,6 +457,7 @@ function generateRegionGroups(regionNodes) {
         type: "url-test",
         tolerance: 50,
         proxies: nodeNames,
+        "include-all-proxies": false,
         hidden: true,
       });
     }
