@@ -193,6 +193,15 @@ rule-providers:
     behavior: classical
     format: yaml
     size-limit: 0
+  lihawhaw-github:
+    type: http
+    path: ./ruleset/lihawhaw-github.yaml
+    url: "https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/github.yaml"
+    interval: 600
+    proxy: DIRECT
+    behavior: classical
+    format: yaml
+    size-limit: 0
   lihawhaw-proxy:
     type: http
     path: ./ruleset/lihawhaw-proxy.yaml
