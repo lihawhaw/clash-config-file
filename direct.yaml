@@ -76,4 +76,4 @@ payload:
   - DOMAIN,static.deepseek.com
   - DOMAIN,chat.deepseek.com
   - DOMAIN-SUFFIX,deepseek.com
-
+  - DOMAIN,cdn.playwright.dev
