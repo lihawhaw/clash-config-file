@@ -215,8 +215,20 @@ payload:
   - DOMAIN-SUFFIX,mintcdn.com
   - DOMAIN,unofficial-builds.nodejs.org
   - DOMAIN-SUFFIX,nodejs.org
-  - DOMAIN,ping0.cc
-  - DOMAIN-SUFFIX,ping0.cc
   - DOMAIN,developer.mozilla.org
   - DOMAIN-SUFFIX,mozilla.org
+  - DOMAIN,prisma.io
+  - DOMAIN-SUFFIX,prisma.io
+  - DOMAIN,prisma-data.net
+  - DOMAIN-SUFFIX,prisma-data.net
+  - DOMAIN,enzuzo.com
+  - DOMAIN-SUFFIX,enzuzo.com
+  - DOMAIN,tolt.io
+  - DOMAIN-SUFFIX,tolt.io
+  - DOMAIN,notion.com
+  - DOMAIN-SUFFIX,notion.com
+  - DOMAIN,notion.so
+  - DOMAIN-SUFFIX,notion.so
+  - DOMAIN,electronjs.org
+  - DOMAIN-SUFFIX,electronjs.org
 

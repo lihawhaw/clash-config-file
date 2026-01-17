@@ -1,0 +1,24 @@
+payload:
+  # IP/Proxy Detection Services
+  - DOMAIN,ping0.cc
+  - DOMAIN-SUFFIX,ping0.cc
+  - DOMAIN,ipapi.is
+  - DOMAIN-SUFFIX,ipapi.is
+  - DOMAIN,scamalytics.com
+  - DOMAIN-SUFFIX,scamalytics.com
+  - DOMAIN,whoer.net
+  - DOMAIN-SUFFIX,whoer.net
+  - DOMAIN,squareup.com
+  - DOMAIN-SUFFIX,squareup.com
+  - DOMAIN,botfaqtor.ru
+  - DOMAIN-SUFFIX,botfaqtor.ru
+  - DOMAIN,yandex.ru
+  - DOMAIN-SUFFIX,yandex.ru
+  - DOMAIN,ipip.net
+  - DOMAIN-SUFFIX,ipip.net
+  - DOMAIN,ipinfo.io
+  - DOMAIN-SUFFIX,ipinfo.io
+  - DOMAIN,ip-api.com
+  - DOMAIN-SUFFIX,ip-api.com
+  - DOMAIN,ipqualityscore.com
+  - DOMAIN-SUFFIX,ipqualityscore.com

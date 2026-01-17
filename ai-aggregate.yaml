@@ -1,0 +1,18 @@
+payload:
+  # Manus
+  - DOMAIN,manus.im
+  - DOMAIN-SUFFIX,manus.im
+  - DOMAIN,manuscdn.com    
+  - DOMAIN-SUFFIX,manuscdn.com
+  # Midjourney
+  - DOMAIN,midjourney.com
+  - DOMAIN-SUFFIX,midjourney.com
+  # Z.ai
+  - DOMAIN,z.ai
+  - DOMAIN-SUFFIX,z.ai
+  # kapa
+  - DOMAIN,kapa.ai
+  - DOMAIN-SUFFIX,kapa.ai
+  # MiniMax
+  - DOMAIN,minimaxi.io
+  - DOMAIN-SUFFIX,minimaxi.io
