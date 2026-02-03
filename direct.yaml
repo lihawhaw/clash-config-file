@@ -1,8 +1,4 @@
 payload:
-  # ----- port start -----
-  - DST-PORT,22,DIRECT
-  - SRC-PORT,22,DIRECT
-  # ----- port end -----
   # ----- xiaomi start -----
   - DOMAIN,account.xiaomi.com
   - DOMAIN,xiaomi.com
