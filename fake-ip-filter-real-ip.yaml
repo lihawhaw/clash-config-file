@@ -1,0 +1,72 @@
+payload:
+  - "*.lan"
+  - "*.local"
+  - "*.arpa"
+  - "time.*.com"
+  - "ntp.*.com"
+  - "+.ntp.org"
+  - "+.msftncsi.com"
+  - "+.msftconnecttest.com"
+  - "+.lihaha.cn"
+  # DIDI START
+  - "+.didichuxing.com"
+  - "+.didiglobal.com"
+  - "+.xiaojukeji.com"
+  - "+.didi.cn"
+  - "+.didipay.com"
+  - "+.diditaxi.com.cn"
+  - "+.didistatic.com"
+  # DIDI END
+  # NTP START
+  - "time.*.com"
+  - "time.*.gov"
+  - "time.*.edu.cn"
+  - "time.*.apple.com"
+  - "time1.*.com"
+  - "time2.*.com"
+  - "time3.*.com"
+  - "time4.*.com"
+  - "time5.*.com"
+  - "time6.*.com"
+  - "time7.*.com"
+  - "ntp.*.com"
+  - "ntp1.*.com"
+  - "ntp2.*.com"
+  - "ntp3.*.com"
+  - "ntp4.*.com"
+  - "ntp5.*.com"
+  - "ntp6.*.com"
+  - "ntp7.*.com"
+  - "*.time.edu.cn"
+  - "*.ntp.org.cn"
+  - "+.pool.ntp.org"
+  - "time1.cloud.tencent.com"
+  # NTP END
+  # STUN START
+  - "+.stun.*.*"
+  - "+.stun.*.*.*"
+  - "+.stun.*.*.*.*"
+  - "+.stun.*.*.*.*.*"
+  # STUN END
+  # XIAOMI START
+  - "*.mi.com"
+  - "+.miwifi.com"
+  - "*.xiaomi.com"
+  - "+.market.xiaomi.com"
+  - "connect.rom.miui.com"
+  # XIAOMI END
+  # NETEASE START
+  - "music.163.com"
+  - "*.music.163.com"
+  - "*.126.net"
+  # NETEASE END
+  # TENCENT START
+  - "+.y.qq.com"
+  - "+.tc.qq.com"
+  - "+.qqmusic.qq.com"
+  - "localhost.ptlogin2.qq.com"
+  - "localhost.sec.qq.com"
+  - "localhost.work.weixin.qq.com"
+  - "+.weixin.qq.com"
+  - "+.wechat.com"
+  # TENCENT END
