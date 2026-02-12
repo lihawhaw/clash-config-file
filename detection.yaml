@@ -1,5 +1,4 @@
 payload:
-  # IP/Proxy Detection Services
   - DOMAIN,ping0.cc
   - DOMAIN-SUFFIX,ping0.cc
   - DOMAIN,ipapi.is
@@ -22,3 +21,13 @@ payload:
   - DOMAIN-SUFFIX,ip-api.com
   - DOMAIN,ipqualityscore.com
   - DOMAIN-SUFFIX,ipqualityscore.com
+  - DOMAIN,ip.skk.moe
+  - DOMAIN-SUFFIX,ip.skk.moe
+  - DOMAIN,iP138.com
+  - DOMAIN-SUFFIX,iP138.com
+  - DOMAIN,ip.cn
+  - DOMAIN-SUFFIX,ip.cn
+  - DOMAIN,ipleak.net
+  - DOMAIN-SUFFIX,ipleak.net
+  - DOMAIN,browserleaks.com
+  - DOMAIN-SUFFIX,browserleaks.com
