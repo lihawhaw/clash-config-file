@@ -4,7 +4,6 @@ payload:
   - DOMAIN-SUFFIX,github.com
   - DOMAIN,raw.githubusercontent.com
   - DOMAIN-SUFFIX,githubusercontent.com
-  - DOMAIN,objects.githubusercontent.com
   - DOMAIN-SUFFIX,github.io
   - DOMAIN,www.githubstatus.com
   - DOMAIN,github.githubassets.com
@@ -14,16 +13,10 @@ payload:
   - DOMAIN,api.github.com
   - DOMAIN,github.dev
   - DOMAIN-SUFFIX,github.dev
-  - DOMAIN,github.io
-  - DOMAIN-SUFFIX,github.io
-  - DOMAIN,githubusercontent.com
-  - DOMAIN-SUFFIX,githubusercontent.com
-  - DOMAIN,githubstatus.com
-  - DOMAIN,githubassets.com
-  - DOMAIN-SUFFIX,githubassets.com
-  - DOMAIN,assets.github.dev
-  - DOMAIN-SUFFIX,assets.github.dev
   - DOMAIN-SUFFIX,githubapp.com
   - DOMAIN-SUFFIX,ghcr.io
   - DOMAIN-SUFFIX,github.blog
   - DOMAIN-SUFFIX,githubnext.com
+  # GitHub Copilot
+  - DOMAIN,api.individual.githubcopilot.com
+  - DOMAIN-SUFFIX,githubcopilot.com

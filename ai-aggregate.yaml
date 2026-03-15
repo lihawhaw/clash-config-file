@@ -1,8 +1,11 @@
 payload:
+  # Grok (x.ai)
+  - DOMAIN,x.ai
+  - DOMAIN-SUFFIX,x.ai
   # Manus
   - DOMAIN,manus.im
   - DOMAIN-SUFFIX,manus.im
-  - DOMAIN,manuscdn.com    
+  - DOMAIN,manuscdn.com
   - DOMAIN-SUFFIX,manuscdn.com
   # Midjourney
   - DOMAIN,midjourney.com
