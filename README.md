@@ -5,7 +5,7 @@
 https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/proxy.yaml
 
 # Direct
-https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/direct.yaml    
+https://proxy.vercel.lihaha.cn/proxy/raw.githubusercontent.com/lihawhaw/clash-config-file/main/direct.yaml
 ```
 
 ```yaml
