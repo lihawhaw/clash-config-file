@@ -1,6 +1,5 @@
 payload:
   # Anthropic/Claude
   - DOMAIN-SUFFIX,claude.ai
-  - DOMAIN,code.claude.com
   - DOMAIN-SUFFIX,claude.com
   - DOMAIN-SUFFIX,anthropic.com

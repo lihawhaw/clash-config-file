@@ -1,5 +1,5 @@
 payload:
-  - DOMAIN,lyz.js.org
+  - DOMAIN-SUFFIX,js.org
   - DOMAIN-SUFFIX,vercel.app
   - DOMAIN-SUFFIX,ant.design
   - DOMAIN-SUFFIX,antv.vision
@@ -10,7 +10,6 @@ payload:
   - DOMAIN-SUFFIX,medium.com
   - DOMAIN-SUFFIX,stackoverflow.com
   - DOMAIN-SUFFIX,nodejs.org
-  - DOMAIN,www.typescriptlang.org
   - DOMAIN-SUFFIX,typescriptlang.org
   - DOMAIN-SUFFIX,formilyjs.org
   - DOMAIN-SUFFIX,fb.me
@@ -29,7 +28,7 @@ payload:
   - DOMAIN-SUFFIX,showdownjs.com
   - DOMAIN-SUFFIX,brew.sh
   - DOMAIN-SUFFIX,algolia.net
-  - DOMAIN,formatjs.io
+  - DOMAIN-SUFFIX,formatjs.io
   - DOMAIN-SUFFIX,gitkraken.com
   - DOMAIN-SUFFIX,carbonads.com
   - DOMAIN,ts-ast-viewer.com
@@ -63,7 +62,7 @@ payload:
   - DOMAIN-SUFFIX,rustdesk.com
   - DOMAIN-SUFFIX,palantir.com
   - DOMAIN-SUFFIX,npmtrends.com
-  - DOMAIN,npm-trends-proxy.uidotdev.workers.dev
+  - DOMAIN-SUFFIX,workers.dev
   - DOMAIN-SUFFIX,mdnplay.dev
   - DOMAIN-SUFFIX,ts-morph.com
   - DOMAIN-SUFFIX,bootstrapcdn.com

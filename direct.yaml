@@ -10,6 +10,7 @@ payload:
   - DOMAIN-SUFFIX,zhihu.com
   - DOMAIN-SUFFIX,163.com
   - DOMAIN-SUFFIX,127.com
+  - DOMAIN-SUFFIX,127.net
   - DOMAIN-SUFFIX,126.net
   - DOMAIN-SUFFIX,arco.design
   - DOMAIN-SUFFIX,hellogithub.com
@@ -17,9 +18,9 @@ payload:
   - DOMAIN-SUFFIX,echats.cn
   - DOMAIN,cloudcache.tencentcs.com
   - DOMAIN,beian.miit.gov.cn
+  - DOMAIN-SUFFIX,gov.cn
   - DOMAIN-SUFFIX,juejin.com
   - DOMAIN-SUFFIX,antgroup.com
-  - DOMAIN-SUFFIX,127.net
   - DOMAIN,links.pipecraft.net,DIRECT
   - DOMAIN-SUFFIX,jianshu.com,DIRECT
   - DOMAIN,icanhazip.com,DIRECT
