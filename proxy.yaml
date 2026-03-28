@@ -79,3 +79,6 @@ payload:
   - DOMAIN-SUFFIX,enzuzo.com
   - DOMAIN-SUFFIX,tolt.io
   - DOMAIN-SUFFIX,electronjs.org
+  - DOMAIN-SUFFIX,deepwiki.com
+  - DOMAIN-SUFFIX,raycast.com
+  - DOMAIN-SUFFIX,context7.com
